@@ -4596,6 +4596,8 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random()
 				`${type === "both" ? "Keypair" : type + " key"} exported successfully!`
 			);
 		} catch (error) {
+			console.error("Export key error:", error);
+			// Show error toast
 			toast.error("Failed to export key. Please try again.");
 		}
 	};
@@ -4629,6 +4631,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random()
 			await navigator.clipboard.writeText(codesText);
 			toast.success("Backup codes copied to clipboard!");
 		} catch (error) {
+			console.error("Copy backup codes error:", error);
 			toast.error("Failed to copy backup codes. Please copy them manually.");
 		}
 	};
@@ -5342,7 +5345,7 @@ function Dashboard({
 	toggleDarkMode: () => void;
 }) {
 	const navigate = useNavigate();
-	const location = useLocation();
+
 	const [activeTab, setActiveTab] = useState<string>("inbox");
 	const [emails, setEmails] = useState<Email[]>([]);
 	const [searchTerm, setSearchTerm] = useState<string>("");
@@ -7198,7 +7201,7 @@ function Compose({
 		setIsSending(true);
 
 		// Add the current input recipient to the list if any
-		let allRecipients = [...recipients];
+		const allRecipients = [...recipients];
 		if (recipient.trim()) {
 			allRecipients.push(recipient.trim());
 		}
