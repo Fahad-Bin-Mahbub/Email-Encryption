@@ -3011,7 +3011,7 @@ function Login({
 			connectedAccounts: [
 				{
 					id: `${provider}-account`,
-					provider: provider,
+					provider: provider as "gmail" | "outlook" | "yahoo" | "other",
 					email: email,
 					connected: true,
 				},
@@ -3111,7 +3111,7 @@ function Login({
 					connectedAccounts: [
 						{
 							id: "gmail-account",
-							provider: "gmail",
+							provider: "gmail" as "gmail" | "outlook" | "yahoo" | "other",
 							email: email,
 							connected: true,
 						},
