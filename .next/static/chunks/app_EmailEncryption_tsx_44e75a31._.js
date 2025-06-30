@@ -216,7 +216,6 @@ function EmailEncryption() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$router$2f$dist$2f$development$2f$chunk$2d$QMGIS6GS$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Route"], {
                                     path: "/security-setup",
                                     element: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SecuritySetup, {
-                                        user: currentUser,
                                         darkMode: darkMode
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
@@ -7489,7 +7488,7 @@ _s3(Register, "SUON8sB6dujwcHXHNMxnZ265dPM=", false, function() {
 });
 _c3 = Register;
 // Enhanced SecuritySetup Component
-function SecuritySetup({ user, darkMode }) {
+function SecuritySetup({ darkMode }) {
     _s4();
     const navigate = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$router$2f$dist$2f$development$2f$chunk$2d$QMGIS6GS$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useNavigate"])();
     const [step, setStep] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(1);
@@ -7497,8 +7496,6 @@ function SecuritySetup({ user, darkMode }) {
     const [twoFactorEnabled, setTwoFactorEnabled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [backupCodesVisible, setBackupCodesVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [generatingKeys, setGeneratingKeys] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [keyGenerated, setKeyGenerated] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [activeKeyId, setActiveKeyId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("default");
     const [keys, setKeys] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([
         {
             id: "default",
@@ -7562,7 +7559,6 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                     newKey
                 ]);
             setGeneratingKeys(false);
-            setKeyGenerated(true);
             __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].success("New encryption keys generated successfully!");
         }, 2000);
     };
@@ -7614,7 +7610,6 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                         ...key,
                         isActive: key.id === pendingKeyAction.keyId
                     })));
-            setActiveKeyId(pendingKeyAction.keyId);
             __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].success("Encryption key activated successfully!");
         }
         setShowConfirmDialog(false);
@@ -7656,7 +7651,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                     className: "h-6 w-6 text-amber-500 mr-3"
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 4670,
+                                    lineNumber: 4663,
                                     columnNumber: 8
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -7664,13 +7659,13 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                     children: "Confirm Key Activation"
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 4671,
+                                    lineNumber: 4664,
                                     columnNumber: 8
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 4669,
+                            lineNumber: 4662,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7678,7 +7673,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                             children: "Are you sure you want to activate this encryption key? This will deactivate your current key and may affect access to previously encrypted emails."
                         }, void 0, false, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 4679,
+                            lineNumber: 4672,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7690,7 +7685,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                     children: "Cancel"
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 4689,
+                                    lineNumber: 4682,
                                     columnNumber: 8
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -7699,24 +7694,24 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                     children: "Activate Key"
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 4699,
+                                    lineNumber: 4692,
                                     columnNumber: 8
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 4688,
+                            lineNumber: 4681,
                             columnNumber: 7
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/EmailEncryption.tsx",
-                    lineNumber: 4664,
+                    lineNumber: 4657,
                     columnNumber: 6
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/EmailEncryption.tsx",
-                lineNumber: 4663,
+                lineNumber: 4656,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7736,12 +7731,12 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                 children: "Security Setup"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 4720,
+                                                lineNumber: 4713,
                                                 columnNumber: 9
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 4719,
+                                            lineNumber: 4712,
                                             columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7755,18 +7750,18 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 4729,
+                                                lineNumber: 4722,
                                                 columnNumber: 9
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 4728,
+                                            lineNumber: 4721,
                                             columnNumber: 8
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 4718,
+                                    lineNumber: 4711,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7778,23 +7773,23 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                         className: "shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-indigo-600 to-purple-600 transition-all duration-500"
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 4743,
+                                        lineNumber: 4736,
                                         columnNumber: 8
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 4738,
+                                    lineNumber: 4731,
                                     columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 4717,
+                            lineNumber: 4710,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 4716,
+                        lineNumber: 4709,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7807,17 +7802,17 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                         className: "h-8 w-8"
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 4754,
+                                        lineNumber: 4747,
                                         columnNumber: 8
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 4753,
+                                    lineNumber: 4746,
                                     columnNumber: 7
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 4752,
+                                lineNumber: 4745,
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -7825,7 +7820,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                 children: step === 1 ? "Two-Factor Authentication" : "Encryption Keys"
                             }, void 0, false, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 4757,
+                                lineNumber: 4750,
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7833,13 +7828,13 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                 children: step === 1 ? "Secure your account with two-factor authentication" : "Manage your encryption keys"
                             }, void 0, false, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 4764,
+                                lineNumber: 4757,
                                 columnNumber: 6
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 4751,
+                        lineNumber: 4744,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$spring$2f$web$2f$dist$2f$react$2d$spring_web$2e$modern$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["animated"].div, {
@@ -7860,12 +7855,12 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                         className: `h-5 w-5 ${darkMode ? "text-indigo-400" : "text-indigo-600"}`
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 4788,
+                                                        lineNumber: 4781,
                                                         columnNumber: 11
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 4787,
+                                                    lineNumber: 4780,
                                                     columnNumber: 10
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7876,7 +7871,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                             children: "Why use two-factor authentication?"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 4795,
+                                                            lineNumber: 4788,
                                                             columnNumber: 11
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7884,24 +7879,24 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                             children: "Two-factor authentication adds an extra layer of security to your account. Even if someone discovers your password, they won't be able to access your encrypted emails without the second factor."
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 4802,
+                                                            lineNumber: 4795,
                                                             columnNumber: 11
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 4794,
+                                                    lineNumber: 4787,
                                                     columnNumber: 10
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 4786,
+                                            lineNumber: 4779,
                                             columnNumber: 9
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 4779,
+                                        lineNumber: 4772,
                                         columnNumber: 8
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7915,12 +7910,12 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                     className: "h-48 w-48 rounded-lg"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 4822,
+                                                    lineNumber: 4815,
                                                     columnNumber: 10
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 4817,
+                                                lineNumber: 4810,
                                                 columnNumber: 9
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7931,7 +7926,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                         children: "Scan this QR code with your authenticator app (like Google Authenticator, Authy, or Microsoft Authenticator)."
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 4829,
+                                                        lineNumber: 4822,
                                                         columnNumber: 10
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7944,19 +7939,19 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                 children: "JBSWY3DPEHPK3PXP"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 4843,
+                                                                lineNumber: 4836,
                                                                 columnNumber: 11
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 4837,
+                                                        lineNumber: 4830,
                                                         columnNumber: 10
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 4828,
+                                                lineNumber: 4821,
                                                 columnNumber: 9
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7972,26 +7967,26 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                     children: "View backup codes"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 4868,
+                                                                    lineNumber: 4861,
                                                                     columnNumber: 12
                                                                 }, this),
                                                                 backupCodesVisible ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.ChevronUp, {
                                                                     className: "h-5 w-5"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 4870,
+                                                                    lineNumber: 4863,
                                                                     columnNumber: 13
                                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.ChevronDown, {
                                                                     className: "h-5 w-5"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 4872,
+                                                                    lineNumber: 4865,
                                                                     columnNumber: 13
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 4860,
+                                                            lineNumber: 4853,
                                                             columnNumber: 11
                                                         }, this),
                                                         backupCodesVisible && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8005,7 +8000,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                             children: "Recovery Codes"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 4885,
+                                                                            lineNumber: 4878,
                                                                             columnNumber: 14
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8016,20 +8011,20 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                     className: "h-3 w-3 mr-1"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 4900,
+                                                                                    lineNumber: 4893,
                                                                                     columnNumber: 15
                                                                                 }, this),
                                                                                 "Copy All"
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 4892,
+                                                                            lineNumber: 4885,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 4884,
+                                                                    lineNumber: 4877,
                                                                     columnNumber: 13
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8037,7 +8032,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                     children: "Save these codes in a secure location. Each code can only be used once."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 4904,
+                                                                    lineNumber: 4897,
                                                                     columnNumber: 13
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8047,29 +8042,29 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                             children: code
                                                                         }, index, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 4914,
+                                                                            lineNumber: 4907,
                                                                             columnNumber: 15
                                                                         }, this))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 4912,
+                                                                    lineNumber: 4905,
                                                                     columnNumber: 13
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 4877,
+                                                            lineNumber: 4870,
                                                             columnNumber: 12
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 4855,
+                                                    lineNumber: 4848,
                                                     columnNumber: 10
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 4854,
+                                                lineNumber: 4847,
                                                 columnNumber: 9
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8086,12 +8081,12 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                             className: `focus:ring-indigo-500 h-4 w-4 text-indigo-600 rounded ${darkMode ? "border-gray-600" : "border-gray-300"}`
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 4933,
+                                                            lineNumber: 4926,
                                                             columnNumber: 11
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 4932,
+                                                        lineNumber: 4925,
                                                         columnNumber: 10
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8103,7 +8098,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                 children: "Enable two-factor authentication"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 4945,
+                                                                lineNumber: 4938,
                                                                 columnNumber: 11
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8111,25 +8106,25 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                 children: "I have saved my recovery codes"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 4953,
+                                                                lineNumber: 4946,
                                                                 columnNumber: 11
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 4944,
+                                                        lineNumber: 4937,
                                                         columnNumber: 10
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 4931,
+                                                lineNumber: 4924,
                                                 columnNumber: 9
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 4816,
+                                        lineNumber: 4809,
                                         columnNumber: 8
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8143,14 +8138,14 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                         className: "mr-1 h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 4973,
+                                                        lineNumber: 4966,
                                                         columnNumber: 10
                                                     }, this),
                                                     "Skip for now"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 4965,
+                                                lineNumber: 4958,
                                                 columnNumber: 9
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8162,25 +8157,25 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                         className: "ml-2 h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 4981,
+                                                        lineNumber: 4974,
                                                         columnNumber: 10
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 4976,
+                                                lineNumber: 4969,
                                                 columnNumber: 9
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 4960,
+                                        lineNumber: 4953,
                                         columnNumber: 8
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 4778,
+                                lineNumber: 4771,
                                 columnNumber: 7
                             }, this),
                             step === 2 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8197,12 +8192,12 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                         className: `h-5 w-5 ${darkMode ? "text-indigo-400" : "text-indigo-600"}`
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 4999,
+                                                        lineNumber: 4992,
                                                         columnNumber: 11
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 4998,
+                                                    lineNumber: 4991,
                                                     columnNumber: 10
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8213,7 +8208,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                             children: "About Encryption Keys"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 5006,
+                                                            lineNumber: 4999,
                                                             columnNumber: 11
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8221,24 +8216,24 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                             children: "Your encryption keys are used to secure your emails. We've generated a pair of keys for you automatically - a public key that others use to send you encrypted messages, and a private key that only you can use to decrypt them."
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 5013,
+                                                            lineNumber: 5006,
                                                             columnNumber: 11
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 5005,
+                                                    lineNumber: 4998,
                                                     columnNumber: 10
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 4997,
+                                            lineNumber: 4990,
                                             columnNumber: 9
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 4990,
+                                        lineNumber: 4983,
                                         columnNumber: 8
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8257,7 +8252,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                         children: keyData.name
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 5043,
+                                                                        lineNumber: 5036,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -8265,18 +8260,18 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                         children: keyData.isActive ? "Active" : "Inactive"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 5050,
+                                                                        lineNumber: 5043,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 5042,
+                                                                lineNumber: 5035,
                                                                 columnNumber: 12
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 5035,
+                                                            lineNumber: 5028,
                                                             columnNumber: 11
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8295,7 +8290,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                             children: "Algorithm:"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 5077,
+                                                                                            lineNumber: 5070,
                                                                                             columnNumber: 15
                                                                                         }, this),
                                                                                         " ",
@@ -8303,7 +8298,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 5072,
+                                                                                    lineNumber: 5065,
                                                                                     columnNumber: 14
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8314,7 +8309,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                             children: "Created:"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 5085,
+                                                                                            lineNumber: 5078,
                                                                                             columnNumber: 15
                                                                                         }, this),
                                                                                         " ",
@@ -8322,13 +8317,13 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 5080,
+                                                                                    lineNumber: 5073,
                                                                                     columnNumber: 14
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 5071,
+                                                                            lineNumber: 5064,
                                                                             columnNumber: 13
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8341,7 +8336,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                             children: "Fingerprint:"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 5095,
+                                                                                            lineNumber: 5088,
                                                                                             columnNumber: 15
                                                                                         }, this),
                                                                                         " ",
@@ -8350,13 +8345,13 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                             children: keyData.fingerprint
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 5096,
+                                                                                            lineNumber: 5089,
                                                                                             columnNumber: 15
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 5090,
+                                                                                    lineNumber: 5083,
                                                                                     columnNumber: 14
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8367,7 +8362,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                             children: "Expiration:"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 5105,
+                                                                                            lineNumber: 5098,
                                                                                             columnNumber: 15
                                                                                         }, this),
                                                                                         " ",
@@ -8375,19 +8370,19 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 5100,
+                                                                                    lineNumber: 5093,
                                                                                     columnNumber: 14
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 5089,
+                                                                            lineNumber: 5082,
                                                                             columnNumber: 13
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 5070,
+                                                                    lineNumber: 5063,
                                                                     columnNumber: 12
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8404,7 +8399,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                             className: "mr-1 h-4 w-4"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 5121,
+                                                                                            lineNumber: 5114,
                                                                                             columnNumber: 15
                                                                                         }, this),
                                                                                         "Export",
@@ -8412,13 +8407,13 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                             className: "ml-1 h-3 w-3"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 5123,
+                                                                                            lineNumber: 5116,
                                                                                             columnNumber: 15
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 5113,
+                                                                                    lineNumber: 5106,
                                                                                     columnNumber: 14
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8432,7 +8427,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                                 children: "Public Key"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 5131,
+                                                                                                lineNumber: 5124,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8441,7 +8436,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                                 children: "Private Key"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 5143,
+                                                                                                lineNumber: 5136,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8450,24 +8445,24 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                                 children: "Both Keys"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 5155,
+                                                                                                lineNumber: 5148,
                                                                                                 columnNumber: 16
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 5130,
+                                                                                        lineNumber: 5123,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 5125,
+                                                                                    lineNumber: 5118,
                                                                                     columnNumber: 14
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 5112,
+                                                                            lineNumber: 5105,
                                                                             columnNumber: 13
                                                                         }, this),
                                                                         keyData.id === "default" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8492,7 +8487,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                                 strokeWidth: "4"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 5194,
+                                                                                                lineNumber: 5187,
                                                                                                 columnNumber: 18
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -8501,13 +8496,13 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                                 d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 5202,
+                                                                                                lineNumber: 5195,
                                                                                                 columnNumber: 18
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 5186,
+                                                                                        lineNumber: 5179,
                                                                                         columnNumber: 17
                                                                                     }, this),
                                                                                     "Generating..."
@@ -8518,7 +8513,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                         className: "mr-1 h-4 w-4"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 5212,
+                                                                                        lineNumber: 5205,
                                                                                         columnNumber: 17
                                                                                     }, this),
                                                                                     "Regenerate"
@@ -8526,7 +8521,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                             }, void 0, true)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 5170,
+                                                                            lineNumber: 5163,
                                                                             columnNumber: 14
                                                                         }, this) : !keyData.isActive ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                                             type: "button",
@@ -8537,14 +8532,14 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                     className: "mr-1 h-4 w-4"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 5223,
+                                                                                    lineNumber: 5216,
                                                                                     columnNumber: 15
                                                                                 }, this),
                                                                                 "Set as Active"
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 5218,
+                                                                            lineNumber: 5211,
                                                                             columnNumber: 14
                                                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                             className: `inline-flex items-center px-2.5 py-1.5 text-xs font-medium rounded ${darkMode ? "bg-green-900 text-green-200" : "bg-green-100 text-green-800"}`,
@@ -8553,32 +8548,32 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                                     className: "mr-1 h-4 w-4"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 5234,
+                                                                                    lineNumber: 5227,
                                                                                     columnNumber: 15
                                                                                 }, this),
                                                                                 "Currently Active"
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 5227,
+                                                                            lineNumber: 5220,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 5110,
+                                                                    lineNumber: 5103,
                                                                     columnNumber: 12
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 5065,
+                                                            lineNumber: 5058,
                                                             columnNumber: 11
                                                         }, this)
                                                     ]
                                                 }, keyData.id, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 5029,
+                                                    lineNumber: 5022,
                                                     columnNumber: 10
                                                 }, this)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8592,12 +8587,12 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                 className: "h-5 w-5 text-amber-400"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 5252,
+                                                                lineNumber: 5245,
                                                                 columnNumber: 12
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 5251,
+                                                            lineNumber: 5244,
                                                             columnNumber: 11
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8608,7 +8603,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                     children: "Important Security Notice"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 5255,
+                                                                    lineNumber: 5248,
                                                                     columnNumber: 12
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8616,30 +8611,30 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                     children: "Make sure to back up your encryption keys securely. If you lose them, you won't be able to decrypt your emails. We don't store a copy of your private keys anywhere."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 5262,
+                                                                    lineNumber: 5255,
                                                                     columnNumber: 12
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 5254,
+                                                            lineNumber: 5247,
                                                             columnNumber: 11
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 5250,
+                                                    lineNumber: 5243,
                                                     columnNumber: 10
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 5243,
+                                                lineNumber: 5236,
                                                 columnNumber: 9
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 5027,
+                                        lineNumber: 5020,
                                         columnNumber: 8
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8653,14 +8648,14 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                         className: "mr-2 h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 5289,
+                                                        lineNumber: 5282,
                                                         columnNumber: 10
                                                     }, this),
                                                     "Back"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 5281,
+                                                lineNumber: 5274,
                                                 columnNumber: 9
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8684,7 +8679,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                     strokeWidth: "4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 5307,
+                                                                    lineNumber: 5300,
                                                                     columnNumber: 13
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -8693,13 +8688,13 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                                     d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 5315,
+                                                                    lineNumber: 5308,
                                                                     columnNumber: 13
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 5301,
+                                                            lineNumber: 5294,
                                                             columnNumber: 12
                                                         }, this),
                                                         "Processing..."
@@ -8711,48 +8706,48 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random().toString(36).subst
                                                             className: "ml-2 h-4 w-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 5326,
+                                                            lineNumber: 5319,
                                                             columnNumber: 12
                                                         }, this)
                                                     ]
                                                 }, void 0, true)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 5292,
+                                                lineNumber: 5285,
                                                 columnNumber: 9
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 5276,
+                                        lineNumber: 5269,
                                         columnNumber: 8
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 4989,
+                                lineNumber: 4982,
                                 columnNumber: 7
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 4775,
+                        lineNumber: 4768,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/EmailEncryption.tsx",
-                lineNumber: 4710,
+                lineNumber: 4703,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/EmailEncryption.tsx",
-        lineNumber: 4656,
+        lineNumber: 4649,
         columnNumber: 3
     }, this);
 }
-_s4(SecuritySetup, "gaUkeMCroinEajA4qvYIjrtPels=", false, function() {
+_s4(SecuritySetup, "0KGr0BGihKeOElBWbCE/KePVbAU=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$router$2f$dist$2f$development$2f$chunk$2d$QMGIS6GS$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useNavigate"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$spring$2f$core$2f$dist$2f$react$2d$spring_core$2e$modern$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["useSpring"]
@@ -8771,7 +8766,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
     const [showComposeModal, setShowComposeModal] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [showNotifications, setShowNotifications] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [showUserMenu, setShowUserMenu] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [labels, setLabels] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([
+    const [labels] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([
         {
             id: "1",
             name: "Work",
@@ -9182,7 +9177,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                         children: "Are you sure you want to log out?"
                     }, void 0, false, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 5759,
+                        lineNumber: 5752,
                         columnNumber: 6
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9198,7 +9193,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                 children: "Yes"
                             }, void 0, false, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 5761,
+                                lineNumber: 5754,
                                 columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -9207,19 +9202,19 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                 children: "No"
                             }, void 0, false, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 5771,
+                                lineNumber: 5764,
                                 columnNumber: 7
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 5760,
+                        lineNumber: 5753,
                         columnNumber: 6
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/EmailEncryption.tsx",
-                lineNumber: 5758,
+                lineNumber: 5751,
                 columnNumber: 5
             }, this), {
             duration: 5000
@@ -9310,12 +9305,12 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                         className: "h-6 w-6"
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 5886,
+                                        lineNumber: 5879,
                                         columnNumber: 8
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 5885,
+                                    lineNumber: 5878,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -9323,13 +9318,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                     children: "SecureEmail"
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 5888,
+                                    lineNumber: 5881,
                                     columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 5884,
+                            lineNumber: 5877,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9343,12 +9338,12 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                             className: "h-5 w-5 text-gray-400"
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 5903,
+                                            lineNumber: 5896,
                                             columnNumber: 9
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 5902,
+                                        lineNumber: 5895,
                                         columnNumber: 8
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -9360,7 +9355,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                         onChange: (e)=>setSearchTerm(e.target.value)
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 5905,
+                                        lineNumber: 5898,
                                         columnNumber: 8
                                     }, this),
                                     searchTerm && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -9370,23 +9365,23 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                             className: "h-4 w-4 text-gray-400 hover:text-gray-500"
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 5922,
+                                            lineNumber: 5915,
                                             columnNumber: 10
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 5918,
+                                        lineNumber: 5911,
                                         columnNumber: 9
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 5901,
+                                lineNumber: 5894,
                                 columnNumber: 7
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 5900,
+                            lineNumber: 5893,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9400,18 +9395,18 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                         className: "h-6 w-6"
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 5941,
+                                        lineNumber: 5934,
                                         columnNumber: 9
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.Moon, {
                                         className: "h-6 w-6"
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 5943,
+                                        lineNumber: 5936,
                                         columnNumber: 9
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 5931,
+                                    lineNumber: 5924,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9427,27 +9422,27 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                     children: "View notifications"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 5957,
+                                                    lineNumber: 5950,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.Bell, {
                                                     className: "h-6 w-6"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 5958,
+                                                    lineNumber: 5951,
                                                     columnNumber: 9
                                                 }, this),
                                                 notifications.some((n)=>!n.read) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "absolute top-1 right-1 block h-3 w-3 rounded-full bg-red-500 ring-2 ring-white dark:ring-gray-800"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 5960,
+                                                    lineNumber: 5953,
                                                     columnNumber: 10
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 5949,
+                                            lineNumber: 5942,
                                             columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -9479,7 +9474,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                     children: "Notifications"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 5981,
+                                                                    lineNumber: 5974,
                                                                     columnNumber: 13
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -9490,18 +9485,18 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 5988,
+                                                                    lineNumber: 5981,
                                                                     columnNumber: 13
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 5980,
+                                                            lineNumber: 5973,
                                                             columnNumber: 12
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 5975,
+                                                        lineNumber: 5968,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9513,20 +9508,20 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                     className: "mx-auto h-8 w-8 mb-2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 6006,
+                                                                    lineNumber: 5999,
                                                                     columnNumber: 14
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                     children: "No notifications"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 6007,
+                                                                    lineNumber: 6000,
                                                                     columnNumber: 14
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6001,
+                                                            lineNumber: 5994,
                                                             columnNumber: 13
                                                         }, this) : notifications.map((notification)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: `px-4 py-3 ${darkMode ? "hover:bg-gray-700" : "hover:bg-gray-50"} ${!notification.read ? darkMode ? "bg-indigo-900 bg-opacity-20" : "bg-indigo-50" : ""}`,
@@ -9540,7 +9535,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                     children: notification.title
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 6027,
+                                                                                    lineNumber: 6020,
                                                                                     columnNumber: 17
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9548,7 +9543,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                     children: notification.description
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 6034,
+                                                                                    lineNumber: 6027,
                                                                                     columnNumber: 17
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9556,36 +9551,36 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                     children: notification.time
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 6041,
+                                                                                    lineNumber: 6034,
                                                                                     columnNumber: 17
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 6026,
+                                                                            lineNumber: 6019,
                                                                             columnNumber: 16
                                                                         }, this),
                                                                         !notification.read && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                             className: "inline-block h-2 w-2 rounded-full bg-indigo-600"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 6050,
+                                                                            lineNumber: 6043,
                                                                             columnNumber: 17
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 6025,
+                                                                    lineNumber: 6018,
                                                                     columnNumber: 15
                                                                 }, this)
                                                             }, notification.id, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6011,
+                                                                lineNumber: 6004,
                                                                 columnNumber: 14
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 5999,
+                                                        lineNumber: 5992,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9601,29 +9596,29 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             children: "Mark all as read"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6062,
+                                                            lineNumber: 6055,
                                                             columnNumber: 12
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 6057,
+                                                        lineNumber: 6050,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 5966,
+                                                lineNumber: 5959,
                                                 columnNumber: 10
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 5964,
+                                            lineNumber: 5957,
                                             columnNumber: 8
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 5948,
+                                    lineNumber: 5941,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9642,7 +9637,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                     children: "Open user menu"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6091,
+                                                    lineNumber: 6084,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -9651,13 +9646,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                     alt: user?.name || "User"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6092,
+                                                    lineNumber: 6085,
                                                     columnNumber: 9
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 6084,
+                                            lineNumber: 6077,
                                             columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -9689,7 +9684,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                     children: user?.name
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 6121,
+                                                                    lineNumber: 6114,
                                                                     columnNumber: 13
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -9697,13 +9692,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                     children: user?.email
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 6128,
+                                                                    lineNumber: 6121,
                                                                     columnNumber: 13
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6116,
+                                                            lineNumber: 6109,
                                                             columnNumber: 12
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -9712,7 +9707,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             children: "Your Profile"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6136,
+                                                            lineNumber: 6129,
                                                             columnNumber: 12
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -9722,7 +9717,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             children: "Settings"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6146,
+                                                            lineNumber: 6139,
                                                             columnNumber: 12
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -9731,46 +9726,46 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             children: "Sign out"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6157,
+                                                            lineNumber: 6150,
                                                             columnNumber: 12
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6115,
+                                                    lineNumber: 6108,
                                                     columnNumber: 11
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 6106,
+                                                lineNumber: 6099,
                                                 columnNumber: 10
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 6104,
+                                            lineNumber: 6097,
                                             columnNumber: 8
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 6083,
+                                    lineNumber: 6076,
                                     columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 5929,
+                            lineNumber: 5922,
                             columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/EmailEncryption.tsx",
-                    lineNumber: 5882,
+                    lineNumber: 5875,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/EmailEncryption.tsx",
-                lineNumber: 5879,
+                lineNumber: 5872,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9791,19 +9786,19 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                 className: "mr-2 h-5 w-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 6190,
+                                                lineNumber: 6183,
                                                 columnNumber: 9
                                             }, this),
                                             "Compose"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 6186,
+                                        lineNumber: 6179,
                                         columnNumber: 8
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 6185,
+                                    lineNumber: 6178,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9820,7 +9815,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             className: "mr-3 h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6208,
+                                                            lineNumber: 6201,
                                                             columnNumber: 10
                                                         }, this),
                                                         "Inbox",
@@ -9829,13 +9824,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             children: getUnreadCount("inbox")
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6211,
+                                                            lineNumber: 6204,
                                                             columnNumber: 11
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6196,
+                                                    lineNumber: 6189,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -9846,7 +9841,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             className: "mr-3 h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6229,
+                                                            lineNumber: 6222,
                                                             columnNumber: 10
                                                         }, this),
                                                         "Encrypted",
@@ -9855,13 +9850,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             children: getUnreadCount("encrypted")
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6232,
+                                                            lineNumber: 6225,
                                                             columnNumber: 11
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6217,
+                                                    lineNumber: 6210,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -9872,14 +9867,14 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             className: "mr-3 h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6250,
+                                                            lineNumber: 6243,
                                                             columnNumber: 10
                                                         }, this),
                                                         "Starred"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6238,
+                                                    lineNumber: 6231,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -9890,14 +9885,14 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             className: "mr-3 h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6266,
+                                                            lineNumber: 6259,
                                                             columnNumber: 10
                                                         }, this),
                                                         "Sent"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6254,
+                                                    lineNumber: 6247,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -9908,14 +9903,14 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             className: "mr-3 h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6282,
+                                                            lineNumber: 6275,
                                                             columnNumber: 10
                                                         }, this),
                                                         "Drafts"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6270,
+                                                    lineNumber: 6263,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -9926,14 +9921,14 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             className: "mr-3 h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6298,
+                                                            lineNumber: 6291,
                                                             columnNumber: 10
                                                         }, this),
                                                         "Trash"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6286,
+                                                    lineNumber: 6279,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9947,7 +9942,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                     children: "Labels"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 6311,
+                                                                    lineNumber: 6304,
                                                                     columnNumber: 12
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -9956,28 +9951,28 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                         className: "h-3 w-3"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 6319,
+                                                                        lineNumber: 6312,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 6312,
+                                                                    lineNumber: 6305,
                                                                     columnNumber: 12
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6310,
+                                                            lineNumber: 6303,
                                                             columnNumber: 11
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 6303,
+                                                        lineNumber: 6296,
                                                         columnNumber: 10
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6302,
+                                                    lineNumber: 6295,
                                                     columnNumber: 9
                                                 }, this),
                                                 labels.map((label)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -9990,20 +9985,20 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                 }
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6334,
+                                                                lineNumber: 6327,
                                                                 columnNumber: 11
                                                             }, this),
                                                             label.name
                                                         ]
                                                     }, label.id, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 6326,
+                                                        lineNumber: 6319,
                                                         columnNumber: 10
                                                     }, this))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 6195,
+                                            lineNumber: 6188,
                                             columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10014,7 +10009,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                     children: "Connected Accounts"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6359,
+                                                    lineNumber: 6352,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -10033,7 +10028,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                 fill: "#4285F4"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 6380,
+                                                                                lineNumber: 6373,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -10041,7 +10036,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                 fill: "#34A853"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 6384,
+                                                                                lineNumber: 6377,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -10049,7 +10044,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                 fill: "#FBBC05"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 6388,
+                                                                                lineNumber: 6381,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -10057,13 +10052,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                 fill: "#EA4335"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 6392,
+                                                                                lineNumber: 6385,
                                                                                 columnNumber: 14
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 6375,
+                                                                        lineNumber: 6368,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     account.provider === "outlook" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -10076,7 +10071,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                 fill: "#0078D4"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 6404,
+                                                                                lineNumber: 6397,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -10084,13 +10079,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                 fill: "#0078D4"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 6405,
+                                                                                lineNumber: 6398,
                                                                                 columnNumber: 14
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 6399,
+                                                                        lineNumber: 6392,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     account.provider === "yahoo" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -10102,19 +10097,19 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                             fill: "#6001D2"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 6414,
+                                                                            lineNumber: 6407,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 6409,
+                                                                        lineNumber: 6402,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     account.provider === "other" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.Mail, {
                                                                         className: "mr-2 h-4 w-4 text-gray-500"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 6421,
+                                                                        lineNumber: 6414,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -10122,20 +10117,20 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                         children: account.email
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 6423,
+                                                                        lineNumber: 6416,
                                                                         columnNumber: 12
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                         className: "ml-auto w-2 h-2 rounded-full bg-green-500"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 6424,
+                                                                        lineNumber: 6417,
                                                                         columnNumber: 12
                                                                     }, this)
                                                                 ]
                                                             }, account.id, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6368,
+                                                                lineNumber: 6361,
                                                                 columnNumber: 11
                                                             }, this)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -10147,31 +10142,31 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                         className: "mr-2 h-4 w-4"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 6435,
+                                                                        lineNumber: 6428,
                                                                         columnNumber: 12
                                                                     }, this),
                                                                     "Add Account"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6428,
+                                                                lineNumber: 6421,
                                                                 columnNumber: 11
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6427,
+                                                            lineNumber: 6420,
                                                             columnNumber: 10
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6366,
+                                                    lineNumber: 6359,
                                                     columnNumber: 9
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 6354,
+                                            lineNumber: 6347,
                                             columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10185,7 +10180,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             children: "Storage"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6444,
+                                                            lineNumber: 6437,
                                                             columnNumber: 10
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -10193,13 +10188,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             children: "30% used"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6447,
+                                                            lineNumber: 6440,
                                                             columnNumber: 10
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6443,
+                                                    lineNumber: 6436,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10208,12 +10203,12 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                         className: `${darkMode ? "bg-indigo-100" : "bg-indigo-900"} h-2.5 rounded-full w-[30%]`
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 6454,
+                                                        lineNumber: 6447,
                                                         columnNumber: 10
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6449,
+                                                    lineNumber: 6442,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10223,7 +10218,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             children: "1.5 GB of 5 GB used"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6461,
+                                                            lineNumber: 6454,
                                                             columnNumber: 10
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -10231,36 +10226,36 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             children: "Upgrade"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6462,
+                                                            lineNumber: 6455,
                                                             columnNumber: 10
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6460,
+                                                    lineNumber: 6453,
                                                     columnNumber: 9
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 6442,
+                                            lineNumber: 6435,
                                             columnNumber: 8
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 6194,
+                                    lineNumber: 6187,
                                     columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 6180,
+                            lineNumber: 6173,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 6179,
+                        lineNumber: 6172,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10272,23 +10267,23 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                 className: "h-6 w-6"
                             }, void 0, false, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 6478,
+                                lineNumber: 6471,
                                 columnNumber: 8
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.Menu, {
                                 className: "h-6 w-6"
                             }, void 0, false, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 6480,
+                                lineNumber: 6473,
                                 columnNumber: 8
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 6473,
+                            lineNumber: 6466,
                             columnNumber: 6
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 6472,
+                        lineNumber: 6465,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -10327,7 +10322,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                     onClick: ()=>setShowMobileMenu(false)
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 6495,
+                                    lineNumber: 6488,
                                     columnNumber: 8
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -10357,12 +10352,12 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                 className: "h-6 w-6"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6516,
+                                                                lineNumber: 6509,
                                                                 columnNumber: 12
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6515,
+                                                            lineNumber: 6508,
                                                             columnNumber: 11
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -10370,13 +10365,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             children: "SecureEmail"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6518,
+                                                            lineNumber: 6511,
                                                             columnNumber: 11
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6514,
+                                                    lineNumber: 6507,
                                                     columnNumber: 10
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -10388,26 +10383,26 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             children: "Close sidebar"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6532,
+                                                            lineNumber: 6525,
                                                             columnNumber: 11
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.X, {
                                                             className: `h-6 w-6 ${darkMode ? "text-gray-400" : "text-gray-500"}`
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6533,
+                                                            lineNumber: 6526,
                                                             columnNumber: 11
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6528,
+                                                    lineNumber: 6521,
                                                     columnNumber: 10
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 6513,
+                                            lineNumber: 6506,
                                             columnNumber: 9
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10416,29 +10411,29 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                 className: "px-2 space-y-1"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 6542,
+                                                lineNumber: 6535,
                                                 columnNumber: 10
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 6541,
+                                            lineNumber: 6534,
                                             columnNumber: 9
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 6504,
+                                    lineNumber: 6497,
                                     columnNumber: 8
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 6488,
+                            lineNumber: 6481,
                             columnNumber: 7
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 6486,
+                        lineNumber: 6479,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10457,7 +10452,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                     children: activeTab
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6566,
+                                                    lineNumber: 6559,
                                                     columnNumber: 9
                                                 }, this),
                                                 selectedEmails.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -10469,13 +10464,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6574,
+                                                    lineNumber: 6567,
                                                     columnNumber: 10
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 6565,
+                                            lineNumber: 6558,
                                             columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10491,14 +10486,14 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                 children: "Mark as read"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6595,
+                                                                lineNumber: 6588,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.MailCheck, {
                                                                 className: "h-5 w-5"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6596,
+                                                                lineNumber: 6589,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -10506,13 +10501,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                 children: "Mark as read"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6597,
+                                                                lineNumber: 6590,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 6587,
+                                                        lineNumber: 6580,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -10524,14 +10519,14 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                 children: "Mark as unread"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6609,
+                                                                lineNumber: 6602,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.Mail, {
                                                                 className: "h-5 w-5"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6610,
+                                                                lineNumber: 6603,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -10539,13 +10534,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                 children: "Mark as unread"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6611,
+                                                                lineNumber: 6604,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 6601,
+                                                        lineNumber: 6594,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -10557,14 +10552,14 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                 children: "Archive"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6623,
+                                                                lineNumber: 6616,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.Archive, {
                                                                 className: "h-5 w-5"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6624,
+                                                                lineNumber: 6617,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -10572,13 +10567,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                 children: "Archive"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6625,
+                                                                lineNumber: 6618,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 6615,
+                                                        lineNumber: 6608,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -10590,14 +10585,14 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                 children: "Delete"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6637,
+                                                                lineNumber: 6630,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.Trash2, {
                                                                 className: "h-5 w-5"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6638,
+                                                                lineNumber: 6631,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -10605,13 +10600,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                 children: "Delete"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6639,
+                                                                lineNumber: 6632,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 6629,
+                                                        lineNumber: 6622,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
@@ -10626,14 +10621,14 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             children: "Refresh"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6655,
+                                                            lineNumber: 6648,
                                                             columnNumber: 12
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.RefreshCw, {
                                                             className: "h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6656,
+                                                            lineNumber: 6649,
                                                             columnNumber: 12
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -10641,30 +10636,30 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                             children: "Refresh"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6657,
+                                                            lineNumber: 6650,
                                                             columnNumber: 12
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6646,
+                                                    lineNumber: 6639,
                                                     columnNumber: 11
                                                 }, this)
                                             }, void 0, false)
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 6583,
+                                            lineNumber: 6576,
                                             columnNumber: 8
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 6564,
+                                    lineNumber: 6557,
                                     columnNumber: 7
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 6559,
+                                lineNumber: 6552,
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$spring$2f$web$2f$dist$2f$react$2d$spring_web$2e$modern$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["animated"].div, {
@@ -10681,7 +10676,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                     className: `mx-auto h-12 w-12 ${darkMode ? "text-gray-600" : "text-gray-400"}`
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6680,
+                                                    lineNumber: 6673,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -10689,7 +10684,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                     children: "No emails"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6685,
+                                                    lineNumber: 6678,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -10697,7 +10692,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                     children: searchTerm ? "No emails match your search criteria." : `No emails in ${activeTab}.`
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6692,
+                                                    lineNumber: 6685,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10710,30 +10705,30 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                 className: "mr-2 h-5 w-5"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6706,
+                                                                lineNumber: 6699,
                                                                 columnNumber: 13
                                                             }, this),
                                                             "Compose New Email"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 6702,
+                                                        lineNumber: 6695,
                                                         columnNumber: 12
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 6701,
+                                                    lineNumber: 6694,
                                                     columnNumber: 11
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 6679,
+                                            lineNumber: 6672,
                                             columnNumber: 10
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 6678,
+                                        lineNumber: 6671,
                                         columnNumber: 9
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         children: [
@@ -10752,7 +10747,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                 onChange: toggleSelectAll
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6721,
+                                                                lineNumber: 6714,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -10761,13 +10756,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                 children: "Select all"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 6733,
+                                                                lineNumber: 6726,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 6720,
+                                                        lineNumber: 6713,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10779,13 +10774,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 6737,
+                                                        lineNumber: 6730,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 6715,
+                                                lineNumber: 6708,
                                                 columnNumber: 10
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -10811,7 +10806,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                             onChange: ()=>toggleEmailSelection(email.id)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 6775,
+                                                                            lineNumber: 6768,
                                                                             columnNumber: 15
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -10820,13 +10815,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                             children: "Select email"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 6787,
+                                                                            lineNumber: 6780,
                                                                             columnNumber: 15
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 6771,
+                                                                    lineNumber: 6764,
                                                                     columnNumber: 14
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10846,12 +10841,12 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                                 children: email.from.split("@")[0].charAt(0)
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 6802,
+                                                                                                lineNumber: 6795,
                                                                                                 columnNumber: 18
                                                                                             }, this)
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 6801,
+                                                                                            lineNumber: 6794,
                                                                                             columnNumber: 17
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10862,7 +10857,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                                     children: email.from === user?.email ? `Me (${user.email})` : email.from
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 6807,
+                                                                                                    lineNumber: 6800,
                                                                                                     columnNumber: 18
                                                                                                 }, this),
                                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -10873,19 +10868,19 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                                     ]
                                                                                                 }, void 0, true, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 6822,
+                                                                                                    lineNumber: 6815,
                                                                                                     columnNumber: 18
                                                                                                 }, this)
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 6806,
+                                                                                            lineNumber: 6799,
                                                                                             columnNumber: 17
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 6800,
+                                                                                    lineNumber: 6793,
                                                                                     columnNumber: 16
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10896,7 +10891,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                             children: formatDate(email.timestamp)
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 6834,
+                                                                                            lineNumber: 6827,
                                                                                             columnNumber: 17
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10909,18 +10904,18 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                                         className: "h-4 w-4 fill-current"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                        lineNumber: 6853,
+                                                                                                        lineNumber: 6846,
                                                                                                         columnNumber: 20
                                                                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.Star, {
                                                                                                         className: "h-4 w-4"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                        lineNumber: 6855,
+                                                                                                        lineNumber: 6848,
                                                                                                         columnNumber: 20
                                                                                                     }, this)
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 6842,
+                                                                                                    lineNumber: 6835,
                                                                                                     columnNumber: 18
                                                                                                 }, this),
                                                                                                 email.isEncrypted && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -10930,14 +10925,14 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                                             className: "mr-1 h-3 w-3"
                                                                                                         }, void 0, false, {
                                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                            lineNumber: 6867,
+                                                                                                            lineNumber: 6860,
                                                                                                             columnNumber: 20
                                                                                                         }, this),
                                                                                                         "Encrypted"
                                                                                                     ]
                                                                                                 }, void 0, true, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 6860,
+                                                                                                    lineNumber: 6853,
                                                                                                     columnNumber: 19
                                                                                                 }, this),
                                                                                                 email.attachments.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -10946,30 +10941,30 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                                         className: "h-4 w-4"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                        lineNumber: 6880,
+                                                                                                        lineNumber: 6873,
                                                                                                         columnNumber: 20
                                                                                                     }, this)
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 6873,
+                                                                                                    lineNumber: 6866,
                                                                                                     columnNumber: 19
                                                                                                 }, this)
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 6841,
+                                                                                            lineNumber: 6834,
                                                                                             columnNumber: 17
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 6833,
+                                                                                    lineNumber: 6826,
                                                                                     columnNumber: 16
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 6799,
+                                                                            lineNumber: 6792,
                                                                             columnNumber: 15
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -10980,7 +10975,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                     children: email.subject
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 6888,
+                                                                                    lineNumber: 6881,
                                                                                     columnNumber: 16
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -10988,7 +10983,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                     children: email.body
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 6901,
+                                                                                    lineNumber: 6894,
                                                                                     columnNumber: 16
                                                                                 }, this),
                                                                                 email.labels && email.labels.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -11001,13 +10996,13 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                             children: label.name
                                                                                         }, labelId, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 6916,
+                                                                                            lineNumber: 6909,
                                                                                             columnNumber: 20
                                                                                         }, this);
                                                                                     })
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 6911,
+                                                                                    lineNumber: 6904,
                                                                                     columnNumber: 17
                                                                                 }, this),
                                                                                 email.attachments.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -11019,7 +11014,7 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                                     className: `mr-1.5 h-3.5 w-3.5 ${darkMode ? "text-indigo-400" : "text-indigo-500"}`
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 6941,
+                                                                                                    lineNumber: 6934,
                                                                                                     columnNumber: 20
                                                                                                 }, this),
                                                                                                 attachment.name,
@@ -11027,74 +11022,74 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                                                                                                     className: `ml-1 h-3 w-3 ${darkMode ? "text-green-400" : "text-green-500"}`
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 6950,
+                                                                                                    lineNumber: 6943,
                                                                                                     columnNumber: 21
                                                                                                 }, this)
                                                                                             ]
                                                                                         }, attachment.id, true, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 6933,
+                                                                                            lineNumber: 6926,
                                                                                             columnNumber: 19
                                                                                         }, this))
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 6931,
+                                                                                    lineNumber: 6924,
                                                                                     columnNumber: 17
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 6887,
+                                                                            lineNumber: 6880,
                                                                             columnNumber: 15
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 6795,
+                                                                    lineNumber: 6788,
                                                                     columnNumber: 14
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 6770,
+                                                            lineNumber: 6763,
                                                             columnNumber: 13
                                                         }, this)
                                                     }, email.id, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 6749,
+                                                        lineNumber: 6742,
                                                         columnNumber: 12
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 6747,
+                                                lineNumber: 6740,
                                                 columnNumber: 10
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 6713,
+                                        lineNumber: 6706,
                                         columnNumber: 9
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 6672,
+                                    lineNumber: 6665,
                                     columnNumber: 7
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 6668,
+                                lineNumber: 6661,
                                 columnNumber: 6
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 6553,
+                        lineNumber: 6546,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/EmailEncryption.tsx",
-                lineNumber: 6177,
+                lineNumber: 6170,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -11104,22 +11099,22 @@ function Dashboard({ user, onLogout, darkMode, toggleDarkMode }) {
                     onClose: ()=>setShowComposeModal(false)
                 }, void 0, false, {
                     fileName: "[project]/app/EmailEncryption.tsx",
-                    lineNumber: 6978,
+                    lineNumber: 6971,
                     columnNumber: 6
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/EmailEncryption.tsx",
-                lineNumber: 6976,
+                lineNumber: 6969,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/EmailEncryption.tsx",
-        lineNumber: 5873,
+        lineNumber: 5866,
         columnNumber: 3
     }, this);
 }
-_s5(Dashboard, "0F0iRGZ0pXvOwzax8u2T9nSgam0=", false, function() {
+_s5(Dashboard, "r9MXiV7ybr1uwTtcKvf3OH/KSgQ=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$router$2f$dist$2f$development$2f$chunk$2d$QMGIS6GS$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useNavigate"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$router$2f$dist$2f$development$2f$chunk$2d$QMGIS6GS$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useLocation"],
@@ -11132,7 +11127,6 @@ _c5 = Dashboard;
 // Enhanced Compose Component with Improved Visual Design
 function Compose({ user, darkMode, onClose }) {
     _s6();
-    const navigate = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$router$2f$dist$2f$development$2f$chunk$2d$QMGIS6GS$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useNavigate"])();
     const [recipient, setRecipient] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [subject, setSubject] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [message, setMessage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
@@ -11147,7 +11141,6 @@ function Compose({ user, darkMode, onClose }) {
     const [showEncryptedPreview, setShowEncryptedPreview] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isSending, setIsSending] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isMinimized, setIsMinimized] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [isDraft, setIsDraft] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [recipients, setRecipients] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [ccVisible, setCcVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [bccVisible, setBccVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -11174,7 +11167,6 @@ function Compose({ user, darkMode, onClose }) {
     const [customExpiryTime, setCustomExpiryTime] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [showCustomExpiry, setShowCustomExpiry] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [formTouched, setFormTouched] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [showEmailFormatting, setShowEmailFormatting] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     // File input ref for custom button
     const fileInputRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const formRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
@@ -11418,7 +11410,6 @@ function Compose({ user, darkMode, onClose }) {
             }
             setDraftSaving(false);
             setDraftSaved(true);
-            setIsDraft(true);
             if (!silent) {
                 __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].success("Email saved as draft");
                 setTimeout(()=>{
@@ -11533,7 +11524,7 @@ function Compose({ user, darkMode, onClose }) {
                 onClick: isMinimized ? ()=>setIsMinimized(false) : onClose
             }, void 0, false, {
                 fileName: "[project]/app/EmailEncryption.tsx",
-                lineNumber: 7378,
+                lineNumber: 7368,
                 columnNumber: 4
             }, this),
             !isMinimized && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -11551,14 +11542,14 @@ function Compose({ user, darkMode, onClose }) {
                                             className: "mr-2 h-6 w-6"
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 7395,
+                                            lineNumber: 7385,
                                             columnNumber: 9
                                         }, this),
                                         "Compose Secure Email"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 7394,
+                                    lineNumber: 7384,
                                     columnNumber: 8
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -11572,7 +11563,7 @@ function Compose({ user, darkMode, onClose }) {
                                                     children: "Draft saved"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 7401,
+                                                    lineNumber: 7391,
                                                     columnNumber: 11
                                                 }, this),
                                                 draftSaving && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -11593,7 +11584,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                     className: "jsx-3a8df4968e7e07ed" + " " + "opacity-25"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 7413,
+                                                                    lineNumber: 7403,
                                                                     columnNumber: 13
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -11602,20 +11593,20 @@ function Compose({ user, darkMode, onClose }) {
                                                                     className: "jsx-3a8df4968e7e07ed" + " " + "opacity-75"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 7421,
+                                                                    lineNumber: 7411,
                                                                     columnNumber: 13
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 7407,
+                                                            lineNumber: 7397,
                                                             columnNumber: 12
                                                         }, this),
                                                         "Saving..."
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 7406,
+                                                    lineNumber: 7396,
                                                     columnNumber: 11
                                                 }, this),
                                                 !draftSaved && !draftSaving && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -11623,13 +11614,13 @@ function Compose({ user, darkMode, onClose }) {
                                                     children: "Draft"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 7431,
+                                                    lineNumber: 7421,
                                                     columnNumber: 11
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 7399,
+                                            lineNumber: 7389,
                                             columnNumber: 9
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -11643,12 +11634,12 @@ function Compose({ user, darkMode, onClose }) {
                                                         className: "h-5 w-5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7442,
+                                                        lineNumber: 7432,
                                                         columnNumber: 11
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 7437,
+                                                    lineNumber: 7427,
                                                     columnNumber: 10
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -11659,30 +11650,30 @@ function Compose({ user, darkMode, onClose }) {
                                                         className: "h-5 w-5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7449,
+                                                        lineNumber: 7439,
                                                         columnNumber: 11
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 7444,
+                                                    lineNumber: 7434,
                                                     columnNumber: 10
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 7436,
+                                            lineNumber: 7426,
                                             columnNumber: 9
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 7398,
+                                    lineNumber: 7388,
                                     columnNumber: 8
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 7393,
+                            lineNumber: 7383,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -11705,7 +11696,7 @@ function Compose({ user, darkMode, onClose }) {
                                                         children: "From"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7469,
+                                                        lineNumber: 7459,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -11716,7 +11707,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                 children: user?.email || "you@example.com"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 7478,
+                                                                lineNumber: 7468,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -11737,17 +11728,17 @@ function Compose({ user, darkMode, onClose }) {
                                                                             children: key.name
                                                                         }, key.id, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 7506,
+                                                                            lineNumber: 7496,
                                                                             columnNumber: 15
                                                                         }, this))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 7490,
+                                                                    lineNumber: 7480,
                                                                     columnNumber: 13
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 7489,
+                                                                lineNumber: 7479,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -11760,7 +11751,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                         className: "h-5 w-5"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 7524,
+                                                                        lineNumber: 7514,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -11768,19 +11759,19 @@ function Compose({ user, darkMode, onClose }) {
                                                                         children: "New Key"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 7525,
+                                                                        lineNumber: 7515,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 7514,
+                                                                lineNumber: 7504,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7477,
+                                                        lineNumber: 7467,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -11788,13 +11779,13 @@ function Compose({ user, darkMode, onClose }) {
                                                         children: "Select the encryption key you want to use or create a new one."
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7528,
+                                                        lineNumber: 7518,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 7468,
+                                                lineNumber: 7458,
                                                 columnNumber: 10
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -11809,7 +11800,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                 children: "To"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 7546,
+                                                                lineNumber: 7536,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -11823,7 +11814,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                     children: email
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 7570,
+                                                                                    lineNumber: 7560,
                                                                                     columnNumber: 15
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -11839,26 +11830,26 @@ function Compose({ user, darkMode, onClose }) {
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 7580,
+                                                                                            lineNumber: 7570,
                                                                                             columnNumber: 16
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.X, {
                                                                                             className: "h-3 w-3"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 7581,
+                                                                                            lineNumber: 7571,
                                                                                             columnNumber: 16
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 7571,
+                                                                                    lineNumber: 7561,
                                                                                     columnNumber: 15
                                                                                 }, this)
                                                                             ]
                                                                         }, index, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 7562,
+                                                                            lineNumber: 7552,
                                                                             columnNumber: 14
                                                                         }, this)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -11871,13 +11862,13 @@ function Compose({ user, darkMode, onClose }) {
                                                                         className: "jsx-3a8df4968e7e07ed" + " " + `flex-1 border-0 focus:ring-0 min-w-[8rem] p-1.5 placeholder-gray-500 sm:text-sm bg-transparent ${darkMode ? "text-white placeholder-gray-400" : "text-gray-900"}`
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 7585,
+                                                                        lineNumber: 7575,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 7554,
+                                                                lineNumber: 7544,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -11895,7 +11886,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                         children: ccVisible ? "Hide Cc" : "Add Cc"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 7604,
+                                                                        lineNumber: 7594,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -11910,19 +11901,19 @@ function Compose({ user, darkMode, onClose }) {
                                                                         children: bccVisible ? "Hide Bcc" : "Add Bcc"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 7624,
+                                                                        lineNumber: 7614,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 7603,
+                                                                lineNumber: 7593,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7545,
+                                                        lineNumber: 7535,
                                                         columnNumber: 11
                                                     }, this),
                                                     ccVisible && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -11934,7 +11925,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                 children: "Cc"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 7650,
+                                                                lineNumber: 7640,
                                                                 columnNumber: 13
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -11950,18 +11941,18 @@ function Compose({ user, darkMode, onClose }) {
                                                                     className: "jsx-3a8df4968e7e07ed" + " " + `shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border rounded-md p-2.5 ${darkMode ? "border-gray-600 bg-gray-700 text-white" : "border-gray-300 bg-white text-gray-900"}`
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 7659,
+                                                                    lineNumber: 7649,
                                                                     columnNumber: 14
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 7658,
+                                                                lineNumber: 7648,
                                                                 columnNumber: 13
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7649,
+                                                        lineNumber: 7639,
                                                         columnNumber: 12
                                                     }, this),
                                                     bccVisible && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -11973,7 +11964,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                 children: "Bcc"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 7680,
+                                                                lineNumber: 7670,
                                                                 columnNumber: 13
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -11989,24 +11980,24 @@ function Compose({ user, darkMode, onClose }) {
                                                                     className: "jsx-3a8df4968e7e07ed" + " " + `shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border rounded-md p-2.5 ${darkMode ? "border-gray-600 bg-gray-700 text-white" : "border-gray-300 bg-white text-gray-900"}`
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 7689,
+                                                                    lineNumber: 7679,
                                                                     columnNumber: 14
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 7688,
+                                                                lineNumber: 7678,
                                                                 columnNumber: 13
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7679,
+                                                        lineNumber: 7669,
                                                         columnNumber: 12
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 7539,
+                                                lineNumber: 7529,
                                                 columnNumber: 10
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12018,7 +12009,7 @@ function Compose({ user, darkMode, onClose }) {
                                                         children: "Subject"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7710,
+                                                        lineNumber: 7700,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12032,18 +12023,18 @@ function Compose({ user, darkMode, onClose }) {
                                                             className: "jsx-3a8df4968e7e07ed" + " " + `shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border rounded-md p-2.5 ${darkMode ? "border-gray-600 bg-gray-700 text-white" : "border-gray-300 bg-white text-gray-900"}`
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 7719,
+                                                            lineNumber: 7709,
                                                             columnNumber: 12
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7718,
+                                                        lineNumber: 7708,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 7709,
+                                                lineNumber: 7699,
                                                 columnNumber: 10
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12058,7 +12049,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                 children: "Message"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 7737,
+                                                                lineNumber: 7727,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12072,12 +12063,12 @@ function Compose({ user, darkMode, onClose }) {
                                                                             className: "h-4 w-4"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 7763,
+                                                                            lineNumber: 7753,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 7754,
+                                                                        lineNumber: 7744,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -12088,12 +12079,12 @@ function Compose({ user, darkMode, onClose }) {
                                                                             className: "h-4 w-4"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 7774,
+                                                                            lineNumber: 7764,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 7765,
+                                                                        lineNumber: 7755,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -12104,19 +12095,19 @@ function Compose({ user, darkMode, onClose }) {
                                                                             className: "h-4 w-4"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 7785,
+                                                                            lineNumber: 7775,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 7776,
+                                                                        lineNumber: 7766,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                         className: "jsx-3a8df4968e7e07ed" + " " + `h-4 border-r mx-1 ${darkMode ? "border-gray-600" : "border-gray-300"}`
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 7787,
+                                                                        lineNumber: 7777,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -12127,12 +12118,12 @@ function Compose({ user, darkMode, onClose }) {
                                                                             className: "h-4 w-4"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 7801,
+                                                                            lineNumber: 7791,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 7792,
+                                                                        lineNumber: 7782,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -12143,19 +12134,19 @@ function Compose({ user, darkMode, onClose }) {
                                                                             className: "h-4 w-4"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 7812,
+                                                                            lineNumber: 7802,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 7803,
+                                                                        lineNumber: 7793,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                         className: "jsx-3a8df4968e7e07ed" + " " + `h-4 border-r mx-1 ${darkMode ? "border-gray-600" : "border-gray-300"}`
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 7814,
+                                                                        lineNumber: 7804,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -12169,7 +12160,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                     className: "h-4 w-4 mr-1"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 7839,
+                                                                                    lineNumber: 7829,
                                                                                     columnNumber: 16
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -12177,7 +12168,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                     children: "Preview"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 7840,
+                                                                                    lineNumber: 7830,
                                                                                     columnNumber: 16
                                                                                 }, this)
                                                                             ]
@@ -12187,7 +12178,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                     className: "h-4 w-4 mr-1"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 7846,
+                                                                                    lineNumber: 7836,
                                                                                     columnNumber: 16
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -12195,26 +12186,26 @@ function Compose({ user, darkMode, onClose }) {
                                                                                     children: "Encrypted"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 7847,
+                                                                                    lineNumber: 7837,
                                                                                     columnNumber: 16
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 7819,
+                                                                        lineNumber: 7809,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 7747,
+                                                                lineNumber: 7737,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7736,
+                                                        lineNumber: 7726,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12229,12 +12220,12 @@ function Compose({ user, darkMode, onClose }) {
                                                             className: "jsx-3a8df4968e7e07ed" + " " + `shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border rounded-md p-3 ${showEncryptedPreview ? darkMode ? "font-mono text-green-400 bg-gray-900 border-gray-700" : "font-mono text-green-600 bg-gray-100 border-gray-300" : darkMode ? "bg-gray-700 text-white border-gray-600" : "bg-white text-gray-900 border-gray-300"}`
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 7857,
+                                                            lineNumber: 7847,
                                                             columnNumber: 12
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7856,
+                                                        lineNumber: 7846,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -12245,7 +12236,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                     className: "inline-block h-3.5 w-3.5 mr-1 text-green-500"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 7886,
+                                                                    lineNumber: 7876,
                                                                     columnNumber: 14
                                                                 }, this),
                                                                 "This message will be encrypted end-to-end and can only be read by the recipient."
@@ -12256,7 +12247,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                     className: "inline-block h-3.5 w-3.5 mr-1 text-amber-500"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 7892,
+                                                                    lineNumber: 7882,
                                                                     columnNumber: 14
                                                                 }, this),
                                                                 "Warning: This message will NOT be encrypted."
@@ -12264,19 +12255,19 @@ function Compose({ user, darkMode, onClose }) {
                                                         }, void 0, true)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7879,
+                                                        lineNumber: 7869,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 7735,
+                                                lineNumber: 7725,
                                                 columnNumber: 10
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 7462,
+                                        lineNumber: 7452,
                                         columnNumber: 9
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12294,7 +12285,7 @@ function Compose({ user, darkMode, onClose }) {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7909,
+                                                        lineNumber: 7899,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -12306,14 +12297,14 @@ function Compose({ user, darkMode, onClose }) {
                                                                 className: "mr-1.5 h-4 w-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 7922,
+                                                                lineNumber: 7912,
                                                                 columnNumber: 12
                                                             }, this),
                                                             "Attach Files"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7917,
+                                                        lineNumber: 7907,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -12324,13 +12315,13 @@ function Compose({ user, darkMode, onClose }) {
                                                         className: "jsx-3a8df4968e7e07ed" + " " + "hidden"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7925,
+                                                        lineNumber: 7915,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 7908,
+                                                lineNumber: 7898,
                                                 columnNumber: 10
                                             }, this),
                                             attachments.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12341,7 +12332,7 @@ function Compose({ user, darkMode, onClose }) {
                                                         className: "mx-auto h-8 w-8 mb-2 text-gray-400"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7943,
+                                                        lineNumber: 7933,
                                                         columnNumber: 12
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -12349,7 +12340,7 @@ function Compose({ user, darkMode, onClose }) {
                                                         children: "Drag and drop files here, or click to browse"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7944,
+                                                        lineNumber: 7934,
                                                         columnNumber: 12
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -12357,13 +12348,13 @@ function Compose({ user, darkMode, onClose }) {
                                                         children: isEncrypted ? "Files will be encrypted before sending" : "Warning: Files will not be encrypted"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7947,
+                                                        lineNumber: 7937,
                                                         columnNumber: 12
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 7935,
+                                                lineNumber: 7925,
                                                 columnNumber: 11
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "jsx-3a8df4968e7e07ed" + " " + "mt-2 space-y-2 max-h-48 overflow-y-auto p-1",
@@ -12379,12 +12370,12 @@ function Compose({ user, darkMode, onClose }) {
                                                                             className: "h-5 w-5"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 7972,
+                                                                            lineNumber: 7962,
                                                                             columnNumber: 16
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 7965,
+                                                                        lineNumber: 7955,
                                                                         columnNumber: 15
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12395,7 +12386,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                 children: file.name
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 7975,
+                                                                                lineNumber: 7965,
                                                                                 columnNumber: 16
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12406,7 +12397,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: formatFileSize(file.size)
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 7983,
+                                                                                        lineNumber: 7973,
                                                                                         columnNumber: 17
                                                                                     }, this),
                                                                                     isEncrypted && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -12416,32 +12407,32 @@ function Compose({ user, darkMode, onClose }) {
                                                                                                 className: "mr-0.5 h-3 w-3"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 7998,
+                                                                                                lineNumber: 7988,
                                                                                                 columnNumber: 19
                                                                                             }, this),
                                                                                             "Encrypted"
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 7991,
+                                                                                        lineNumber: 7981,
                                                                                         columnNumber: 18
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 7982,
+                                                                                lineNumber: 7972,
                                                                                 columnNumber: 16
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 7974,
+                                                                        lineNumber: 7964,
                                                                         columnNumber: 15
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 7964,
+                                                                lineNumber: 7954,
                                                                 columnNumber: 14
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -12452,29 +12443,29 @@ function Compose({ user, darkMode, onClose }) {
                                                                     className: "h-4 w-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 8014,
+                                                                    lineNumber: 8004,
                                                                     columnNumber: 15
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 8005,
+                                                                lineNumber: 7995,
                                                                 columnNumber: 14
                                                             }, this)
                                                         ]
                                                     }, index, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 7956,
+                                                        lineNumber: 7946,
                                                         columnNumber: 13
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 7954,
+                                                lineNumber: 7944,
                                                 columnNumber: 11
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 7901,
+                                        lineNumber: 7891,
                                         columnNumber: 9
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12488,7 +12479,7 @@ function Compose({ user, darkMode, onClose }) {
                                                         children: "Security Options"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 8029,
+                                                        lineNumber: 8019,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -12499,20 +12490,20 @@ function Compose({ user, darkMode, onClose }) {
                                                                 className: "mr-1 h-3.5 w-3.5"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 8044,
+                                                                lineNumber: 8034,
                                                                 columnNumber: 12
                                                             }, this),
                                                             "Apply Security Template"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 8036,
+                                                        lineNumber: 8026,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 8028,
+                                                lineNumber: 8018,
                                                 columnNumber: 10
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12534,13 +12525,13 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         className: `h-5 w-5 mr-3 ${darkMode ? "text-green-400" : "text-green-600"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8068,
+                                                                                        lineNumber: 8058,
                                                                                         columnNumber: 16
                                                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.Unlock, {
                                                                                         className: `h-5 w-5 mr-3 ${darkMode ? "text-yellow-400" : "text-yellow-600"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8074,
+                                                                                        lineNumber: 8064,
                                                                                         columnNumber: 16
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -12548,13 +12539,13 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: "End-to-End Encryption"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8082,
+                                                                                        lineNumber: 8072,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 8066,
+                                                                                lineNumber: 8056,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12569,7 +12560,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         className: "jsx-3a8df4968e7e07ed" + " " + `toggle-checkbox absolute block w-6 h-6 rounded-full border-4 appearance-none cursor-pointer transition-transform duration-200 ease-in-out ${darkMode ? "bg-gray-300 border-gray-600" : "bg-white border-gray-300"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8097,
+                                                                                        lineNumber: 8087,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -12577,19 +12568,19 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         className: "jsx-3a8df4968e7e07ed" + " " + `toggle-label block overflow-hidden h-6 rounded-full cursor-pointer transition-colors duration-200 ease-in-out ${isEncrypted ? "bg-green-600" : darkMode ? "bg-gray-600" : "bg-gray-300"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8109,
+                                                                                        lineNumber: 8099,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 8096,
+                                                                                lineNumber: 8086,
                                                                                 columnNumber: 14
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 8065,
+                                                                        lineNumber: 8055,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -12597,13 +12588,13 @@ function Compose({ user, darkMode, onClose }) {
                                                                         children: isEncrypted ? "This message will be encrypted and can only be read by the recipient." : "Warning: This message will NOT be encrypted and can be read by others."
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 8121,
+                                                                        lineNumber: 8111,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 8054,
+                                                                lineNumber: 8044,
                                                                 columnNumber: 12
                                                             }, this),
                                                             isEncrypted && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12614,7 +12605,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                         children: "Encryption Level"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 8147,
+                                                                        lineNumber: 8137,
                                                                         columnNumber: 14
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12632,7 +12623,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         className: "jsx-3a8df4968e7e07ed" + " " + `focus:ring-indigo-500 h-4 w-4 text-indigo-600 ${darkMode ? "border-gray-600" : "border-gray-300"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8156,
+                                                                                        lineNumber: 8146,
                                                                                         columnNumber: 16
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -12641,13 +12632,13 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: "Standard (AES-256)"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8168,
+                                                                                        lineNumber: 8158,
                                                                                         columnNumber: 16
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 8155,
+                                                                                lineNumber: 8145,
                                                                                 columnNumber: 15
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12662,7 +12653,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         className: "jsx-3a8df4968e7e07ed" + " " + `focus:ring-indigo-500 h-4 w-4 text-indigo-600 ${darkMode ? "border-gray-600" : "border-gray-300"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8178,
+                                                                                        lineNumber: 8168,
                                                                                         columnNumber: 16
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -12671,19 +12662,19 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: "High (AES-256 + ChaCha20)"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8190,
+                                                                                        lineNumber: 8180,
                                                                                         columnNumber: 16
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 8177,
+                                                                                lineNumber: 8167,
                                                                                 columnNumber: 15
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 8154,
+                                                                        lineNumber: 8144,
                                                                         columnNumber: 14
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12691,13 +12682,13 @@ function Compose({ user, darkMode, onClose }) {
                                                                         children: "High encryption provides additional security but may not be supported by all recipients."
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 8200,
+                                                                        lineNumber: 8190,
                                                                         columnNumber: 14
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 8140,
+                                                                lineNumber: 8130,
                                                                 columnNumber: 13
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12713,7 +12704,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         className: `h-5 w-5 mr-3 ${passwordProtected ? darkMode ? "text-purple-400" : "text-purple-600" : darkMode ? "text-gray-400" : "text-gray-500"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8225,
+                                                                                        lineNumber: 8215,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -12721,13 +12712,13 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: "Password Protection"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8236,
+                                                                                        lineNumber: 8226,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 8224,
+                                                                                lineNumber: 8214,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12742,7 +12733,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         className: "jsx-3a8df4968e7e07ed" + " " + `toggle-checkbox absolute block w-6 h-6 rounded-full border-4 appearance-none cursor-pointer transition-transform duration-200 ease-in-out ${darkMode ? "bg-gray-300 border-gray-600" : "bg-white border-gray-300"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8251,
+                                                                                        lineNumber: 8241,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -12750,19 +12741,19 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         className: "jsx-3a8df4968e7e07ed" + " " + `toggle-label block overflow-hidden h-6 rounded-full cursor-pointer transition-colors duration-200 ease-in-out ${passwordProtected ? "bg-purple-600" : darkMode ? "bg-gray-600" : "bg-gray-300"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8265,
+                                                                                        lineNumber: 8255,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 8250,
+                                                                                lineNumber: 8240,
                                                                                 columnNumber: 14
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 8223,
+                                                                        lineNumber: 8213,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -12770,7 +12761,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                         children: "Require a password to view this message, even if the recipient doesn't use SecureEmail."
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 8277,
+                                                                        lineNumber: 8267,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     passwordProtected && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12785,7 +12776,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: "Password"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8296,
+                                                                                        lineNumber: 8286,
                                                                                         columnNumber: 16
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12800,7 +12791,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                                 className: "jsx-3a8df4968e7e07ed" + " " + `shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border rounded-md pr-10 p-2 ${darkMode ? "border-gray-600 bg-gray-700 text-white" : "border-gray-300 bg-white text-gray-900"}`
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 8305,
+                                                                                                lineNumber: 8295,
                                                                                                 columnNumber: 17
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12809,24 +12800,24 @@ function Compose({ user, darkMode, onClose }) {
                                                                                                     className: "h-5 w-5 text-gray-400"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 8318,
+                                                                                                    lineNumber: 8308,
                                                                                                     columnNumber: 18
                                                                                                 }, this)
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 8317,
+                                                                                                lineNumber: 8307,
                                                                                                 columnNumber: 17
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8304,
+                                                                                        lineNumber: 8294,
                                                                                         columnNumber: 16
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 8295,
+                                                                                lineNumber: 8285,
                                                                                 columnNumber: 15
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12838,7 +12829,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: "Password Hint (Optional)"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8323,
+                                                                                        lineNumber: 8313,
                                                                                         columnNumber: 16
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12852,36 +12843,36 @@ function Compose({ user, darkMode, onClose }) {
                                                                                             className: "jsx-3a8df4968e7e07ed" + " " + `shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border rounded-md p-2 ${darkMode ? "border-gray-600 bg-gray-700 text-white" : "border-gray-300 bg-white text-gray-900"}`
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 8332,
+                                                                                            lineNumber: 8322,
                                                                                             columnNumber: 17
                                                                                         }, this)
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8331,
+                                                                                        lineNumber: 8321,
                                                                                         columnNumber: 16
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 8322,
+                                                                                lineNumber: 8312,
                                                                                 columnNumber: 15
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 8294,
+                                                                        lineNumber: 8284,
                                                                         columnNumber: 14
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 8212,
+                                                                lineNumber: 8202,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 8052,
+                                                        lineNumber: 8042,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -12900,7 +12891,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         className: `h-5 w-5 mr-3 ${expiresAt ? darkMode ? "text-blue-400" : "text-blue-600" : darkMode ? "text-gray-400" : "text-gray-500"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8369,
+                                                                                        lineNumber: 8359,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -12908,13 +12899,13 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: "Message Expiration"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8380,
+                                                                                        lineNumber: 8370,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 8368,
+                                                                                lineNumber: 8358,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -12928,7 +12919,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: "Never expires"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8403,
+                                                                                        lineNumber: 8393,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -12937,7 +12928,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: "1 Hour"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8404,
+                                                                                        lineNumber: 8394,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -12946,7 +12937,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: "24 Hours"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8405,
+                                                                                        lineNumber: 8395,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -12955,7 +12946,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: "7 Days"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8406,
+                                                                                        lineNumber: 8396,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -12964,7 +12955,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: "30 Days"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8407,
+                                                                                        lineNumber: 8397,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -12973,19 +12964,19 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: "Custom..."
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8408,
+                                                                                        lineNumber: 8398,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 8394,
+                                                                                lineNumber: 8384,
                                                                                 columnNumber: 14
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 8367,
+                                                                        lineNumber: 8357,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -12993,7 +12984,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                         children: expiresAt ? "This message will self-destruct after the specified time." : "This message will not expire automatically."
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 8411,
+                                                                        lineNumber: 8401,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     showCustomExpiry && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -13010,7 +13001,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                     className: "jsx-3a8df4968e7e07ed" + " " + `shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-20 sm:text-sm border rounded-md p-2 ${darkMode ? "border-gray-600 bg-gray-700 text-white" : "border-gray-300 bg-white text-gray-900"}`
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 8431,
+                                                                                    lineNumber: 8421,
                                                                                     columnNumber: 16
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -13023,7 +13014,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                             children: "Minutes"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 8451,
+                                                                                            lineNumber: 8441,
                                                                                             columnNumber: 17
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -13032,7 +13023,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                             children: "Hours"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 8452,
+                                                                                            lineNumber: 8442,
                                                                                             columnNumber: 17
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -13041,7 +13032,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                             children: "Days"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 8453,
+                                                                                            lineNumber: 8443,
                                                                                             columnNumber: 17
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -13050,30 +13041,30 @@ function Compose({ user, darkMode, onClose }) {
                                                                                             children: "Weeks"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 8454,
+                                                                                            lineNumber: 8444,
                                                                                             columnNumber: 17
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 8443,
+                                                                                    lineNumber: 8433,
                                                                                     columnNumber: 16
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 8430,
+                                                                            lineNumber: 8420,
                                                                             columnNumber: 15
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 8429,
+                                                                        lineNumber: 8419,
                                                                         columnNumber: 14
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 8356,
+                                                                lineNumber: 8346,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -13089,7 +13080,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         className: `h-5 w-5 mr-3 ${readReceipt ? darkMode ? "text-amber-400" : "text-amber-600" : darkMode ? "text-gray-400" : "text-gray-500"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8475,
+                                                                                        lineNumber: 8465,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -13097,13 +13088,13 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: "Read Receipt"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8486,
+                                                                                        lineNumber: 8476,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 8474,
+                                                                                lineNumber: 8464,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -13118,7 +13109,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         className: "jsx-3a8df4968e7e07ed" + " " + `toggle-checkbox absolute block w-6 h-6 rounded-full border-4 appearance-none cursor-pointer transition-transform duration-200 ease-in-out ${darkMode ? "bg-gray-300 border-gray-600" : "bg-white border-gray-300"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8501,
+                                                                                        lineNumber: 8491,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -13126,19 +13117,19 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         className: "jsx-3a8df4968e7e07ed" + " " + `toggle-label block overflow-hidden h-6 rounded-full cursor-pointer transition-colors duration-200 ease-in-out ${readReceipt ? "bg-amber-600" : darkMode ? "bg-gray-600" : "bg-gray-300"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8513,
+                                                                                        lineNumber: 8503,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 8500,
+                                                                                lineNumber: 8490,
                                                                                 columnNumber: 14
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 8473,
+                                                                        lineNumber: 8463,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -13146,13 +13137,13 @@ function Compose({ user, darkMode, onClose }) {
                                                                         children: "Get notified when your message is read by the recipient."
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 8525,
+                                                                        lineNumber: 8515,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 8462,
+                                                                lineNumber: 8452,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -13163,7 +13154,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                         children: "Additional Security"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 8549,
+                                                                        lineNumber: 8539,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -13179,7 +13170,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         className: "jsx-3a8df4968e7e07ed" + " " + `focus:ring-indigo-500 h-4 w-4 text-indigo-600 rounded ${darkMode ? "border-gray-600" : "border-gray-300"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8558,
+                                                                                        lineNumber: 8548,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -13188,13 +13179,13 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: "Prevent forwarding"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8566,
+                                                                                        lineNumber: 8556,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 8557,
+                                                                                lineNumber: 8547,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -13207,7 +13198,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         className: "jsx-3a8df4968e7e07ed" + " " + `focus:ring-indigo-500 h-4 w-4 text-indigo-600 rounded ${darkMode ? "border-gray-600" : "border-gray-300"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8576,
+                                                                                        lineNumber: 8566,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -13216,13 +13207,13 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: "Disable copy & paste"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8584,
+                                                                                        lineNumber: 8574,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 8575,
+                                                                                lineNumber: 8565,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -13235,7 +13226,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         className: "jsx-3a8df4968e7e07ed" + " " + `focus:ring-indigo-500 h-4 w-4 text-indigo-600 rounded ${darkMode ? "border-gray-600" : "border-gray-300"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8594,
+                                                                                        lineNumber: 8584,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -13244,54 +13235,54 @@ function Compose({ user, darkMode, onClose }) {
                                                                                         children: "Prevent screenshots"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 8602,
+                                                                                        lineNumber: 8592,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 8593,
+                                                                                lineNumber: 8583,
                                                                                 columnNumber: 14
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 8556,
+                                                                        lineNumber: 8546,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 8542,
+                                                                lineNumber: 8532,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 8354,
+                                                        lineNumber: 8344,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 8050,
+                                                lineNumber: 8040,
                                                 columnNumber: 10
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 8023,
+                                        lineNumber: 8013,
                                         columnNumber: 9
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 7460,
+                                lineNumber: 7450,
                                 columnNumber: 8
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 7456,
+                            lineNumber: 7446,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -13307,14 +13298,14 @@ function Compose({ user, darkMode, onClose }) {
                                                     className: "mr-1 h-3 w-3"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 8636,
+                                                    lineNumber: 8626,
                                                     columnNumber: 11
                                                 }, this),
                                                 "Encrypted"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 8629,
+                                            lineNumber: 8619,
                                             columnNumber: 10
                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "jsx-3a8df4968e7e07ed" + " " + `inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium ${darkMode ? "bg-yellow-900 text-yellow-200" : "bg-yellow-100 text-yellow-800"}`,
@@ -13323,14 +13314,14 @@ function Compose({ user, darkMode, onClose }) {
                                                     className: "mr-1 h-3 w-3"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 8647,
+                                                    lineNumber: 8637,
                                                     columnNumber: 11
                                                 }, this),
                                                 "Unencrypted"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 8640,
+                                            lineNumber: 8630,
                                             columnNumber: 10
                                         }, this),
                                         passwordProtected && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -13340,14 +13331,14 @@ function Compose({ user, darkMode, onClose }) {
                                                     className: "mr-1 h-3 w-3"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 8660,
+                                                    lineNumber: 8650,
                                                     columnNumber: 11
                                                 }, this),
                                                 "Password Protected"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 8653,
+                                            lineNumber: 8643,
                                             columnNumber: 10
                                         }, this),
                                         expiresAt && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -13357,14 +13348,14 @@ function Compose({ user, darkMode, onClose }) {
                                                     className: "mr-1 h-3 w-3"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 8673,
+                                                    lineNumber: 8663,
                                                     columnNumber: 11
                                                 }, this),
                                                 expiresAt === "1h" ? "Expires: 1 Hour" : expiresAt === "24h" ? "Expires: 24 Hours" : expiresAt === "7d" ? "Expires: 7 Days" : expiresAt === "30d" ? "Expires: 30 Days" : expiresAt === "custom" ? `Expires: ${customExpiryTime || "Custom"}` : "Expires: Custom"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 8666,
+                                            lineNumber: 8656,
                                             columnNumber: 10
                                         }, this),
                                         readReceipt && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -13374,20 +13365,20 @@ function Compose({ user, darkMode, onClose }) {
                                                     className: "mr-1 h-3 w-3"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 8696,
+                                                    lineNumber: 8686,
                                                     columnNumber: 11
                                                 }, this),
                                                 "Read Receipt"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 8689,
+                                            lineNumber: 8679,
                                             columnNumber: 10
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 8627,
+                                    lineNumber: 8617,
                                     columnNumber: 8
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -13418,7 +13409,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                         className: "jsx-3a8df4968e7e07ed" + " " + "opacity-25"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 8722,
+                                                                        lineNumber: 8712,
                                                                         columnNumber: 14
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -13427,13 +13418,13 @@ function Compose({ user, darkMode, onClose }) {
                                                                         className: "jsx-3a8df4968e7e07ed" + " " + "opacity-75"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 8730,
+                                                                        lineNumber: 8720,
                                                                         columnNumber: 14
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 8716,
+                                                                lineNumber: 8706,
                                                                 columnNumber: 13
                                                             }, this),
                                                             "Saving..."
@@ -13444,7 +13435,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                 className: "mr-2 h-4 w-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 8740,
+                                                                lineNumber: 8730,
                                                                 columnNumber: 13
                                                             }, this),
                                                             "Save Draft"
@@ -13452,7 +13443,7 @@ function Compose({ user, darkMode, onClose }) {
                                                     }, void 0, true)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 8704,
+                                                    lineNumber: 8694,
                                                     columnNumber: 10
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -13464,20 +13455,20 @@ function Compose({ user, darkMode, onClose }) {
                                                             className: "mr-2 h-4 w-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 8754,
+                                                            lineNumber: 8744,
                                                             columnNumber: 11
                                                         }, this),
                                                         "Cancel"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 8745,
+                                                    lineNumber: 8735,
                                                     columnNumber: 10
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 8703,
+                                            lineNumber: 8693,
                                             columnNumber: 9
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -13502,7 +13493,7 @@ function Compose({ user, darkMode, onClose }) {
                                                                 className: "jsx-3a8df4968e7e07ed" + " " + "opacity-25"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 8774,
+                                                                lineNumber: 8764,
                                                                 columnNumber: 13
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -13511,13 +13502,13 @@ function Compose({ user, darkMode, onClose }) {
                                                                 className: "jsx-3a8df4968e7e07ed" + " " + "opacity-75"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 8782,
+                                                                lineNumber: 8772,
                                                                 columnNumber: 13
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 8768,
+                                                        lineNumber: 8758,
                                                         columnNumber: 12
                                                     }, this),
                                                     "Sending..."
@@ -13528,7 +13519,7 @@ function Compose({ user, darkMode, onClose }) {
                                                         className: "mr-2 h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 8792,
+                                                        lineNumber: 8782,
                                                         columnNumber: 12
                                                     }, this),
                                                     "Send Secure Email"
@@ -13536,30 +13527,30 @@ function Compose({ user, darkMode, onClose }) {
                                             }, void 0, true)
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 8758,
+                                            lineNumber: 8748,
                                             columnNumber: 9
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 8702,
+                                    lineNumber: 8692,
                                     columnNumber: 8
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 8620,
+                            lineNumber: 8610,
                             columnNumber: 7
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/EmailEncryption.tsx",
-                    lineNumber: 7387,
+                    lineNumber: 7377,
                     columnNumber: 6
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/EmailEncryption.tsx",
-                lineNumber: 7386,
+                lineNumber: 7376,
                 columnNumber: 5
             }, this),
             isMinimized && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -13573,12 +13564,12 @@ function Compose({ user, darkMode, onClose }) {
                             className: "h-5 w-5"
                         }, void 0, false, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 8811,
+                            lineNumber: 8801,
                             columnNumber: 7
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 8810,
+                        lineNumber: 8800,
                         columnNumber: 6
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -13589,7 +13580,7 @@ function Compose({ user, darkMode, onClose }) {
                                 children: "New Message"
                             }, void 0, false, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 8814,
+                                lineNumber: 8804,
                                 columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -13597,26 +13588,26 @@ function Compose({ user, darkMode, onClose }) {
                                 children: subject || "No subject"
                             }, void 0, false, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 8815,
+                                lineNumber: 8805,
                                 columnNumber: 7
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 8813,
+                        lineNumber: 8803,
                         columnNumber: 6
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "jsx-3a8df4968e7e07ed" + " " + "ml-2 flex-shrink-0 bg-white/20 rounded-full h-2 w-2 animate-pulse"
                     }, void 0, false, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 8819,
+                        lineNumber: 8809,
                         columnNumber: 6
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/EmailEncryption.tsx",
-                lineNumber: 8805,
+                lineNumber: 8795,
                 columnNumber: 5
             }, this),
             showAddKeyModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -13636,14 +13627,14 @@ function Compose({ user, darkMode, onClose }) {
                                                 className: "mr-2 h-5 w-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 8835,
+                                                lineNumber: 8825,
                                                 columnNumber: 10
                                             }, this),
                                             "Generate New Encryption Key"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 8834,
+                                        lineNumber: 8824,
                                         columnNumber: 9
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -13653,23 +13644,23 @@ function Compose({ user, darkMode, onClose }) {
                                             className: "h-5 w-5"
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 8842,
+                                            lineNumber: 8832,
                                             columnNumber: 10
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 8838,
+                                        lineNumber: 8828,
                                         columnNumber: 9
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 8833,
+                                lineNumber: 8823,
                                 columnNumber: 8
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 8832,
+                            lineNumber: 8822,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -13686,12 +13677,12 @@ function Compose({ user, darkMode, onClose }) {
                                                     className: `h-5 w-5 ${darkMode ? "text-indigo-400" : "text-indigo-600"}`
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 8858,
+                                                    lineNumber: 8848,
                                                     columnNumber: 11
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 8857,
+                                                lineNumber: 8847,
                                                 columnNumber: 10
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -13701,23 +13692,23 @@ function Compose({ user, darkMode, onClose }) {
                                                     children: "Encryption keys are used to secure your emails. Larger keys provide more security but may be slower to process."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 8865,
+                                                    lineNumber: 8855,
                                                     columnNumber: 11
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 8864,
+                                                lineNumber: 8854,
                                                 columnNumber: 10
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 8856,
+                                        lineNumber: 8846,
                                         columnNumber: 9
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 8849,
+                                    lineNumber: 8839,
                                     columnNumber: 8
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -13732,7 +13723,7 @@ function Compose({ user, darkMode, onClose }) {
                                                     children: "Key Name"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 8879,
+                                                    lineNumber: 8869,
                                                     columnNumber: 10
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -13744,13 +13735,13 @@ function Compose({ user, darkMode, onClose }) {
                                                     className: "jsx-3a8df4968e7e07ed" + " " + `w-full p-2.5 border rounded-md ${darkMode ? "bg-gray-700 border-gray-600 text-white" : "bg-white border-gray-300 text-gray-900"} focus:ring-indigo-500 focus:border-indigo-500`
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 8886,
+                                                    lineNumber: 8876,
                                                     columnNumber: 10
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 8878,
+                                            lineNumber: 8868,
                                             columnNumber: 9
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -13761,7 +13752,7 @@ function Compose({ user, darkMode, onClose }) {
                                                     children: "Key Size"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 8901,
+                                                    lineNumber: 8891,
                                                     columnNumber: 10
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -13775,7 +13766,7 @@ function Compose({ user, darkMode, onClose }) {
                                                             children: "2048-bit RSA"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 8917,
+                                                            lineNumber: 8907,
                                                             columnNumber: 11
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -13784,7 +13775,7 @@ function Compose({ user, darkMode, onClose }) {
                                                             children: "3072-bit RSA"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 8918,
+                                                            lineNumber: 8908,
                                                             columnNumber: 11
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -13793,13 +13784,13 @@ function Compose({ user, darkMode, onClose }) {
                                                             children: "4096-bit RSA (Recommended)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 8919,
+                                                            lineNumber: 8909,
                                                             columnNumber: 11
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 8908,
+                                                    lineNumber: 8898,
                                                     columnNumber: 10
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -13807,13 +13798,13 @@ function Compose({ user, darkMode, onClose }) {
                                                     children: "4096-bit keys offer the strongest security and are recommended for most users."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 8921,
+                                                    lineNumber: 8911,
                                                     columnNumber: 10
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 8900,
+                                            lineNumber: 8890,
                                             columnNumber: 9
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -13824,7 +13815,7 @@ function Compose({ user, darkMode, onClose }) {
                                                     children: "Key Expiration"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 8932,
+                                                    lineNumber: 8922,
                                                     columnNumber: 10
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -13837,7 +13828,7 @@ function Compose({ user, darkMode, onClose }) {
                                                             children: "Never expires"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 8947,
+                                                            lineNumber: 8937,
                                                             columnNumber: 11
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -13846,7 +13837,7 @@ function Compose({ user, darkMode, onClose }) {
                                                             children: "6 months"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 8948,
+                                                            lineNumber: 8938,
                                                             columnNumber: 11
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -13855,7 +13846,7 @@ function Compose({ user, darkMode, onClose }) {
                                                             children: "1 year"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 8949,
+                                                            lineNumber: 8939,
                                                             columnNumber: 11
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -13864,31 +13855,31 @@ function Compose({ user, darkMode, onClose }) {
                                                             children: "2 years"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 8950,
+                                                            lineNumber: 8940,
                                                             columnNumber: 11
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 8939,
+                                                    lineNumber: 8929,
                                                     columnNumber: 10
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 8931,
+                                            lineNumber: 8921,
                                             columnNumber: 9
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 8877,
+                                    lineNumber: 8867,
                                     columnNumber: 8
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 8848,
+                            lineNumber: 8838,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -13901,7 +13892,7 @@ function Compose({ user, darkMode, onClose }) {
                                     children: "Cancel"
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 8964,
+                                    lineNumber: 8954,
                                     columnNumber: 8
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -13926,7 +13917,7 @@ function Compose({ user, darkMode, onClose }) {
                                                         className: "jsx-3a8df4968e7e07ed" + " " + "opacity-25"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 8991,
+                                                        lineNumber: 8981,
                                                         columnNumber: 12
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -13935,13 +13926,13 @@ function Compose({ user, darkMode, onClose }) {
                                                         className: "jsx-3a8df4968e7e07ed" + " " + "opacity-75"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 8999,
+                                                        lineNumber: 8989,
                                                         columnNumber: 12
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 8985,
+                                                lineNumber: 8975,
                                                 columnNumber: 11
                                             }, this),
                                             "Generating Key..."
@@ -13952,7 +13943,7 @@ function Compose({ user, darkMode, onClose }) {
                                                 className: "inline-block h-4 w-4 mr-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 9009,
+                                                lineNumber: 8999,
                                                 columnNumber: 11
                                             }, this),
                                             "Generate Key"
@@ -13960,24 +13951,24 @@ function Compose({ user, darkMode, onClose }) {
                                     }, void 0, true)
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 8975,
+                                    lineNumber: 8965,
                                     columnNumber: 8
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 8957,
+                            lineNumber: 8947,
                             columnNumber: 7
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/EmailEncryption.tsx",
-                    lineNumber: 8826,
+                    lineNumber: 8816,
                     columnNumber: 6
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/EmailEncryption.tsx",
-                lineNumber: 8825,
+                lineNumber: 8815,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -13987,9 +13978,8 @@ function Compose({ user, darkMode, onClose }) {
         ]
     }, void 0, true);
 }
-_s6(Compose, "pUjt3NuCeiM9RBK24CLTg+zBAlI=", false, function() {
+_s6(Compose, "7pYuQPToxjRB4jDSWOG3Osk0Ig4=", false, function() {
     return [
-        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$router$2f$dist$2f$development$2f$chunk$2d$QMGIS6GS$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useNavigate"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$spring$2f$core$2f$dist$2f$react$2d$spring_core$2e$modern$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["useSpring"]
     ];
 });
@@ -14149,7 +14139,7 @@ function ViewEmail({ user, darkMode }) {
         else return (bytes / 1048576).toFixed(1) + " MB";
     };
     // Handle download
-    const handleDownload = (attachmentId)=>{
+    const handleDownload = ()=>{
         setIsDownloading(true);
         // Simulate download
         setTimeout(()=>{
@@ -14175,12 +14165,12 @@ function ViewEmail({ user, darkMode }) {
                                         className: "h-6 w-6"
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 9227,
+                                        lineNumber: 9217,
                                         columnNumber: 8
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 9219,
+                                    lineNumber: 9209,
                                     columnNumber: 7
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -14190,20 +14180,20 @@ function ViewEmail({ user, darkMode }) {
                                             className: `mr-2 h-5 w-5 ${darkMode ? "text-indigo-400" : "text-indigo-600"}`
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 9234,
+                                            lineNumber: 9224,
                                             columnNumber: 8
                                         }, this),
                                         "View Email"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 9229,
+                                    lineNumber: 9219,
                                     columnNumber: 7
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 9218,
+                            lineNumber: 9208,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14216,30 +14206,30 @@ function ViewEmail({ user, darkMode }) {
                                         className: "mr-1.5 h-5 w-5"
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 9251,
+                                        lineNumber: 9241,
                                         columnNumber: 8
                                     }, this),
                                     "Back to Inbox"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 9243,
+                                lineNumber: 9233,
                                 columnNumber: 7
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 9242,
+                            lineNumber: 9232,
                             columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/EmailEncryption.tsx",
-                    lineNumber: 9217,
+                    lineNumber: 9207,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/EmailEncryption.tsx",
-                lineNumber: 9216,
+                lineNumber: 9206,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -14255,7 +14245,7 @@ function ViewEmail({ user, darkMode }) {
                                     className: "inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-600 mb-4"
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 9268,
+                                    lineNumber: 9258,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -14263,7 +14253,7 @@ function ViewEmail({ user, darkMode }) {
                                     children: "Loading email..."
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 9269,
+                                    lineNumber: 9259,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -14271,18 +14261,18 @@ function ViewEmail({ user, darkMode }) {
                                     children: "Please wait while we retrieve your secure message"
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 9276,
+                                    lineNumber: 9266,
                                     columnNumber: 9
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 9267,
+                            lineNumber: 9257,
                             columnNumber: 8
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 9262,
+                        lineNumber: 9252,
                         columnNumber: 7
                     }, this) : email ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$spring$2f$web$2f$dist$2f$react$2d$spring_web$2e$modern$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["animated"].div, {
                         style: emailViewAnimation,
@@ -14300,7 +14290,7 @@ function ViewEmail({ user, darkMode }) {
                                                     children: email.subject
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 9301,
+                                                    lineNumber: 9291,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14312,12 +14302,12 @@ function ViewEmail({ user, darkMode }) {
                                                                 className: `h-5 w-5 ${email.starred ? "text-yellow-500 fill-current" : ""}`
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 9316,
+                                                                lineNumber: 9306,
                                                                 columnNumber: 13
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 9309,
+                                                            lineNumber: 9299,
                                                             columnNumber: 12
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -14326,24 +14316,24 @@ function ViewEmail({ user, darkMode }) {
                                                                 className: "h-5 w-5"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 9329,
+                                                                lineNumber: 9319,
                                                                 columnNumber: 13
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 9322,
+                                                            lineNumber: 9312,
                                                             columnNumber: 12
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 9308,
+                                                    lineNumber: 9298,
                                                     columnNumber: 11
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 9300,
+                                            lineNumber: 9290,
                                             columnNumber: 10
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14356,12 +14346,12 @@ function ViewEmail({ user, darkMode }) {
                                                         children: email.from.split("@")[0].charAt(0)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 9336,
+                                                        lineNumber: 9326,
                                                         columnNumber: 12
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 9335,
+                                                    lineNumber: 9325,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14377,7 +14367,7 @@ function ViewEmail({ user, darkMode }) {
                                                                             children: email.from
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 9343,
+                                                                            lineNumber: 9333,
                                                                             columnNumber: 14
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -14388,13 +14378,13 @@ function ViewEmail({ user, darkMode }) {
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 9350,
+                                                                            lineNumber: 9340,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 9342,
+                                                                    lineNumber: 9332,
                                                                     columnNumber: 13
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14402,13 +14392,13 @@ function ViewEmail({ user, darkMode }) {
                                                                     children: formatDate(email.timestamp)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 9358,
+                                                                    lineNumber: 9348,
                                                                     columnNumber: 13
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 9341,
+                                                            lineNumber: 9331,
                                                             columnNumber: 12
                                                         }, this),
                                                         email.labels && email.labels.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14418,24 +14408,24 @@ function ViewEmail({ user, darkMode }) {
                                                                 children: "Personal"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 9370,
+                                                                lineNumber: 9360,
                                                                 columnNumber: 14
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 9369,
+                                                            lineNumber: 9359,
                                                             columnNumber: 13
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 9340,
+                                                    lineNumber: 9330,
                                                     columnNumber: 11
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 9334,
+                                            lineNumber: 9324,
                                             columnNumber: 10
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14448,14 +14438,14 @@ function ViewEmail({ user, darkMode }) {
                                                             className: "mr-1 h-3 w-3"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 9398,
+                                                            lineNumber: 9388,
                                                             columnNumber: 13
                                                         }, this),
                                                         isDecrypted ? "Decrypted" : "Encrypted"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 9387,
+                                                    lineNumber: 9377,
                                                     columnNumber: 12
                                                 }, this),
                                                 email.encryptionLevel === "high" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -14465,14 +14455,14 @@ function ViewEmail({ user, darkMode }) {
                                                             className: "mr-1 h-3 w-3"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 9410,
+                                                            lineNumber: 9400,
                                                             columnNumber: 13
                                                         }, this),
                                                         "High Encryption"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 9403,
+                                                    lineNumber: 9393,
                                                     columnNumber: 12
                                                 }, this),
                                                 email.passwordProtected && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -14482,14 +14472,14 @@ function ViewEmail({ user, darkMode }) {
                                                             className: "mr-1 h-3 w-3"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 9422,
+                                                            lineNumber: 9412,
                                                             columnNumber: 13
                                                         }, this),
                                                         "Password Protected"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 9415,
+                                                    lineNumber: 9405,
                                                     columnNumber: 12
                                                 }, this),
                                                 email.expiresAt && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -14499,7 +14489,7 @@ function ViewEmail({ user, darkMode }) {
                                                             className: "mr-1 h-3 w-3"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 9434,
+                                                            lineNumber: 9424,
                                                             columnNumber: 13
                                                         }, this),
                                                         "Expires in ",
@@ -14507,7 +14497,7 @@ function ViewEmail({ user, darkMode }) {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 9427,
+                                                    lineNumber: 9417,
                                                     columnNumber: 12
                                                 }, this),
                                                 email.readReceipt && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -14517,26 +14507,26 @@ function ViewEmail({ user, darkMode }) {
                                                             className: "mr-1 h-3 w-3"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 9446,
+                                                            lineNumber: 9436,
                                                             columnNumber: 13
                                                         }, this),
                                                         "Read Receipt"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 9439,
+                                                    lineNumber: 9429,
                                                     columnNumber: 12
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 9385,
+                                            lineNumber: 9375,
                                             columnNumber: 10
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 9293,
+                                    lineNumber: 9283,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14550,12 +14540,12 @@ function ViewEmail({ user, darkMode }) {
                                                         children: paragraph
                                                     }, index, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 9460,
+                                                        lineNumber: 9450,
                                                         columnNumber: 14
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 9458,
+                                                lineNumber: 9448,
                                                 columnNumber: 12
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14569,7 +14559,7 @@ function ViewEmail({ user, darkMode }) {
                                                                 className: "mr-1.5 h-4 w-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 9485,
+                                                                lineNumber: 9475,
                                                                 columnNumber: 16
                                                             }, this),
                                                             "Hide Encrypted Version"
@@ -14580,7 +14570,7 @@ function ViewEmail({ user, darkMode }) {
                                                                 className: "mr-1.5 h-4 w-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 9490,
+                                                                lineNumber: 9480,
                                                                 columnNumber: 16
                                                             }, this),
                                                             "View Encrypted Version"
@@ -14588,12 +14578,12 @@ function ViewEmail({ user, darkMode }) {
                                                     }, void 0, true)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 9473,
+                                                    lineNumber: 9463,
                                                     columnNumber: 13
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 9472,
+                                                lineNumber: 9462,
                                                 columnNumber: 12
                                             }, this),
                                             showEncryptedContent && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14607,7 +14597,7 @@ function ViewEmail({ user, darkMode }) {
                                                                 children: "Encrypted Content"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 9505,
+                                                                lineNumber: 9495,
                                                                 columnNumber: 15
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -14615,13 +14605,13 @@ function ViewEmail({ user, darkMode }) {
                                                                 children: email.encryptionLevel === "high" ? "AES-256 + ChaCha20" : "AES-256"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 9512,
+                                                                lineNumber: 9502,
                                                                 columnNumber: 15
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 9504,
+                                                        lineNumber: 9494,
                                                         columnNumber: 14
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("pre", {
@@ -14639,7 +14629,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
 -----END ENCRYPTED MESSAGE-----`
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 9522,
+                                                        lineNumber: 9512,
                                                         columnNumber: 14
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14647,13 +14637,13 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                         children: "This is what your email looks like to anyone who doesn't have the decryption key."
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 9541,
+                                                        lineNumber: 9531,
                                                         columnNumber: 14
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 9499,
+                                                lineNumber: 9489,
                                                 columnNumber: 13
                                             }, this),
                                             email.attachments.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14666,7 +14656,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                 className: "mr-2 h-4 w-4 text-gray-500"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 9560,
+                                                                lineNumber: 9550,
                                                                 columnNumber: 15
                                                             }, this),
                                                             "Attachments (",
@@ -14675,7 +14665,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 9555,
+                                                        lineNumber: 9545,
                                                         columnNumber: 14
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14689,12 +14679,12 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                             className: `h-6 w-6 ${darkMode ? "text-indigo-400" : "text-indigo-600"}`
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 9578,
+                                                                            lineNumber: 9568,
                                                                             columnNumber: 18
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 9573,
+                                                                        lineNumber: 9563,
                                                                         columnNumber: 17
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14709,7 +14699,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                             children: attachment.name
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 9589,
+                                                                                            lineNumber: 9579,
                                                                                             columnNumber: 20
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -14717,13 +14707,13 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                             children: formatFileSize(attachment.size)
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 9598,
+                                                                                            lineNumber: 9588,
                                                                                             columnNumber: 20
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 9588,
+                                                                                    lineNumber: 9578,
                                                                                     columnNumber: 19
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14736,18 +14726,18 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                                     className: "mr-1 h-3 w-3"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 9617,
+                                                                                                    lineNumber: 9607,
                                                                                                     columnNumber: 22
                                                                                                 }, this),
                                                                                                 "Encrypted"
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 9610,
+                                                                                            lineNumber: 9600,
                                                                                             columnNumber: 21
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                                            onClick: ()=>handleDownload(attachment.id),
+                                                                                            onClick: ()=>handleDownload(),
                                                                                             disabled: isDownloading,
                                                                                             className: `inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200 ${isDownloading ? "opacity-70 cursor-not-allowed" : ""}`,
                                                                                             children: isDownloading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -14767,7 +14757,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                                                 strokeWidth: "4"
                                                                                                             }, void 0, false, {
                                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                                lineNumber: 9640,
+                                                                                                                lineNumber: 9628,
                                                                                                                 columnNumber: 24
                                                                                                             }, this),
                                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -14776,13 +14766,13 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                                                 d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                                                                                                             }, void 0, false, {
                                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                                lineNumber: 9648,
+                                                                                                                lineNumber: 9636,
                                                                                                                 columnNumber: 24
                                                                                                             }, this)
                                                                                                         ]
                                                                                                     }, void 0, true, {
                                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                        lineNumber: 9634,
+                                                                                                        lineNumber: 9622,
                                                                                                         columnNumber: 23
                                                                                                     }, this),
                                                                                                     "Downloading..."
@@ -14793,7 +14783,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                                         className: "mr-1.5 h-3 w-3"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                        lineNumber: 9658,
+                                                                                                        lineNumber: 9646,
                                                                                                         columnNumber: 23
                                                                                                     }, this),
                                                                                                     "Download"
@@ -14801,41 +14791,41 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                             }, void 0, true)
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 9621,
+                                                                                            lineNumber: 9611,
                                                                                             columnNumber: 20
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 9608,
+                                                                                    lineNumber: 9598,
                                                                                     columnNumber: 19
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 9587,
+                                                                            lineNumber: 9577,
                                                                             columnNumber: 18
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 9586,
+                                                                        lineNumber: 9576,
                                                                         columnNumber: 17
                                                                     }, this)
                                                                 ]
                                                             }, attachment.id, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 9565,
+                                                                lineNumber: 9555,
                                                                 columnNumber: 16
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 9563,
+                                                        lineNumber: 9553,
                                                         columnNumber: 14
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 9554,
+                                                lineNumber: 9544,
                                                 columnNumber: 13
                                             }, this),
                                             showReplyBox && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14849,7 +14839,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 9679,
+                                                        lineNumber: 9667,
                                                         columnNumber: 14
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -14865,12 +14855,12 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                     placeholder: "Write your reply here..."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 9688,
+                                                                    lineNumber: 9676,
                                                                     columnNumber: 16
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 9687,
+                                                                lineNumber: 9675,
                                                                 columnNumber: 15
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14890,7 +14880,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                         checked: true
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 9705,
+                                                                                        lineNumber: 9693,
                                                                                         columnNumber: 18
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -14899,13 +14889,13 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                         children: "Encrypt reply"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 9716,
+                                                                                        lineNumber: 9704,
                                                                                         columnNumber: 18
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 9704,
+                                                                                lineNumber: 9692,
                                                                                 columnNumber: 17
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14918,7 +14908,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                         className: `focus:ring-indigo-500 h-4 w-4 text-indigo-600 rounded ${darkMode ? "border-gray-600" : "border-gray-300"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 9728,
+                                                                                        lineNumber: 9716,
                                                                                         columnNumber: 18
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -14927,19 +14917,19 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                         children: "Request read receipt"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 9738,
+                                                                                        lineNumber: 9726,
                                                                                         columnNumber: 18
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 9727,
+                                                                                lineNumber: 9715,
                                                                                 columnNumber: 17
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 9703,
+                                                                        lineNumber: 9691,
                                                                         columnNumber: 16
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -14952,7 +14942,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                 children: "Cancel"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 9751,
+                                                                                lineNumber: 9739,
                                                                                 columnNumber: 17
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -14963,38 +14953,38 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                         className: "mr-1.5 h-4 w-4"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 9766,
+                                                                                        lineNumber: 9754,
                                                                                         columnNumber: 18
                                                                                     }, this),
                                                                                     "Send Reply"
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 9762,
+                                                                                lineNumber: 9750,
                                                                                 columnNumber: 17
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 9750,
+                                                                        lineNumber: 9738,
                                                                         columnNumber: 16
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 9702,
+                                                                lineNumber: 9690,
                                                                 columnNumber: 15
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 9686,
+                                                        lineNumber: 9674,
                                                         columnNumber: 14
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 9674,
+                                                lineNumber: 9662,
                                                 columnNumber: 13
                                             }, this),
                                             showForwardBox && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15005,7 +14995,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                         children: "Forward Email"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 9782,
+                                                        lineNumber: 9770,
                                                         columnNumber: 14
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -15019,7 +15009,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                         children: "To"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 9791,
+                                                                        lineNumber: 9779,
                                                                         columnNumber: 16
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15033,18 +15023,18 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                             placeholder: "recipient@example.com"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 9800,
+                                                                            lineNumber: 9788,
                                                                             columnNumber: 17
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 9799,
+                                                                        lineNumber: 9787,
                                                                         columnNumber: 16
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 9790,
+                                                                lineNumber: 9778,
                                                                 columnNumber: 15
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15056,7 +15046,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                         children: "Message"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 9817,
+                                                                        lineNumber: 9805,
                                                                         columnNumber: 16
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15069,18 +15059,18 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                             className: `shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border rounded-md font-mono ${darkMode ? "border-gray-600 bg-gray-700 text-white" : "border-gray-300 bg-white text-gray-900"}`
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 9826,
+                                                                            lineNumber: 9814,
                                                                             columnNumber: 17
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 9825,
+                                                                        lineNumber: 9813,
                                                                         columnNumber: 16
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 9816,
+                                                                lineNumber: 9804,
                                                                 columnNumber: 15
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15100,7 +15090,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                         checked: true
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 9844,
+                                                                                        lineNumber: 9832,
                                                                                         columnNumber: 18
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -15109,13 +15099,13 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                         children: "Encrypt message"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 9855,
+                                                                                        lineNumber: 9843,
                                                                                         columnNumber: 18
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 9843,
+                                                                                lineNumber: 9831,
                                                                                 columnNumber: 17
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15129,7 +15119,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                         checked: true
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 9867,
+                                                                                        lineNumber: 9855,
                                                                                         columnNumber: 18
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -15138,19 +15128,19 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                         children: "Include attachments"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 9878,
+                                                                                        lineNumber: 9866,
                                                                                         columnNumber: 18
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 9866,
+                                                                                lineNumber: 9854,
                                                                                 columnNumber: 17
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 9842,
+                                                                        lineNumber: 9830,
                                                                         columnNumber: 16
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15163,7 +15153,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                 children: "Cancel"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 9891,
+                                                                                lineNumber: 9879,
                                                                                 columnNumber: 17
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -15174,38 +15164,38 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                                                         className: "mr-1.5 h-4 w-4"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 9906,
+                                                                                        lineNumber: 9894,
                                                                                         columnNumber: 18
                                                                                     }, this),
                                                                                     "Forward"
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 9902,
+                                                                                lineNumber: 9890,
                                                                                 columnNumber: 17
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 9890,
+                                                                        lineNumber: 9878,
                                                                         columnNumber: 16
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 9841,
+                                                                lineNumber: 9829,
                                                                 columnNumber: 15
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 9789,
+                                                        lineNumber: 9777,
                                                         columnNumber: 14
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 9777,
+                                                lineNumber: 9765,
                                                 columnNumber: 13
                                             }, this)
                                         ]
@@ -15218,12 +15208,12 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                     className: `h-12 w-12 ${darkMode ? "text-indigo-400" : "text-indigo-600"}`
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 9925,
+                                                    lineNumber: 9913,
                                                     columnNumber: 13
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 9918,
+                                                lineNumber: 9906,
                                                 columnNumber: 12
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -15231,7 +15221,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                 children: "This message is encrypted"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 9931,
+                                                lineNumber: 9919,
                                                 columnNumber: 12
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -15239,7 +15229,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                 children: "Enter the password to decrypt this message and view its contents securely."
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 9938,
+                                                lineNumber: 9926,
                                                 columnNumber: 12
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15252,30 +15242,30 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                             className: "mr-2 h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 9951,
+                                                            lineNumber: 9939,
                                                             columnNumber: 14
                                                         }, this),
                                                         "Enter Password"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 9947,
+                                                    lineNumber: 9935,
                                                     columnNumber: 13
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 9946,
+                                                lineNumber: 9934,
                                                 columnNumber: 12
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 9917,
+                                        lineNumber: 9905,
                                         columnNumber: 11
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 9454,
+                                    lineNumber: 9444,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15290,19 +15280,19 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                         className: "mr-1.5 h-5 w-5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 9976,
+                                                        lineNumber: 9964,
                                                         columnNumber: 12
                                                     }, this),
                                                     "Back"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 9968,
+                                                lineNumber: 9956,
                                                 columnNumber: 11
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 9967,
+                                            lineNumber: 9955,
                                             columnNumber: 10
                                         }, this),
                                         isDecrypted && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15323,14 +15313,14 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                             className: "mr-1.5 h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 9997,
+                                                            lineNumber: 9985,
                                                             columnNumber: 13
                                                         }, this),
                                                         "Reply"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 9982,
+                                                    lineNumber: 9970,
                                                     columnNumber: 12
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -15348,37 +15338,37 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                             className: "mr-1.5 h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 10011,
+                                                            lineNumber: 9999,
                                                             columnNumber: 13
                                                         }, this),
                                                         "Forward"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 10000,
+                                                    lineNumber: 9988,
                                                     columnNumber: 12
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 9981,
+                                            lineNumber: 9969,
                                             columnNumber: 11
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 9960,
+                                    lineNumber: 9948,
                                     columnNumber: 9
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 9287,
+                            lineNumber: 9277,
                             columnNumber: 8
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 9286,
+                        lineNumber: 9276,
                         columnNumber: 7
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: `shadow-lg rounded-lg p-6 ${darkMode ? "bg-gray-800" : "bg-white"}`,
@@ -15389,7 +15379,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                     className: "mx-auto h-12 w-12 text-gray-400"
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 10026,
+                                    lineNumber: 10014,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -15397,7 +15387,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                     children: "No email found"
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 10027,
+                                    lineNumber: 10015,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -15405,7 +15395,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                     children: "The email you're looking for does not exist or has been deleted."
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 10034,
+                                    lineNumber: 10022,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15418,40 +15408,40 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                 className: "mr-1.5 h-5 w-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 10047,
+                                                lineNumber: 10035,
                                                 columnNumber: 11
                                             }, this),
                                             "Back to Inbox"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 10043,
+                                        lineNumber: 10031,
                                         columnNumber: 10
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 10042,
+                                    lineNumber: 10030,
                                     columnNumber: 9
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 10025,
+                            lineNumber: 10013,
                             columnNumber: 8
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 10020,
+                        lineNumber: 10008,
                         columnNumber: 7
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/EmailEncryption.tsx",
-                    lineNumber: 9260,
+                    lineNumber: 9250,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/EmailEncryption.tsx",
-                lineNumber: 9259,
+                lineNumber: 9249,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -15490,12 +15480,12 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                             className: `h-10 w-10 ${darkMode ? "text-indigo-400" : "text-indigo-600"}`
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 10080,
+                                            lineNumber: 10068,
                                             columnNumber: 10
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 10075,
+                                        lineNumber: 10063,
                                         columnNumber: 9
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -15503,7 +15493,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                         children: "Password Required"
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 10086,
+                                        lineNumber: 10074,
                                         columnNumber: 9
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -15511,7 +15501,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                         children: "This message is protected with a password. Please enter the password to view it."
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 10093,
+                                        lineNumber: 10081,
                                         columnNumber: 9
                                     }, this),
                                     email?.passwordHint && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15525,12 +15515,12 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                         className: "h-5 w-5 text-yellow-400"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 10111,
+                                                        lineNumber: 10099,
                                                         columnNumber: 13
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 10110,
+                                                    lineNumber: 10098,
                                                     columnNumber: 12
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15541,7 +15531,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                             children: "Password Hint"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 10114,
+                                                            lineNumber: 10102,
                                                             columnNumber: 13
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -15549,30 +15539,30 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                             children: email.passwordHint
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 10121,
+                                                            lineNumber: 10109,
                                                             columnNumber: 13
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 10113,
+                                                    lineNumber: 10101,
                                                     columnNumber: 12
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 10109,
+                                            lineNumber: 10097,
                                             columnNumber: 11
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 10102,
+                                        lineNumber: 10090,
                                         columnNumber: 10
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 10074,
+                                lineNumber: 10062,
                                 columnNumber: 8
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -15587,7 +15577,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                 children: "Password"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 10135,
+                                                lineNumber: 10123,
                                                 columnNumber: 10
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15603,7 +15593,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                         autoFocus: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 10144,
+                                                        lineNumber: 10132,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15612,24 +15602,24 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                             className: "h-5 w-5 text-gray-400"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 10158,
+                                                            lineNumber: 10146,
                                                             columnNumber: 12
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 10157,
+                                                        lineNumber: 10145,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 10143,
+                                                lineNumber: 10131,
                                                 columnNumber: 10
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 10134,
+                                        lineNumber: 10122,
                                         columnNumber: 9
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15642,7 +15632,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                 children: "Cancel"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 10163,
+                                                lineNumber: 10151,
                                                 columnNumber: 10
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -15653,48 +15643,48 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
                                                         className: "mr-1.5 h-5 w-5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 10178,
+                                                        lineNumber: 10166,
                                                         columnNumber: 11
                                                     }, this),
                                                     "Decrypt Message"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 10174,
+                                                lineNumber: 10162,
                                                 columnNumber: 10
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 10162,
+                                        lineNumber: 10150,
                                         columnNumber: 9
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 10133,
+                                lineNumber: 10121,
                                 columnNumber: 8
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 10066,
+                        lineNumber: 10054,
                         columnNumber: 7
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/EmailEncryption.tsx",
-                    lineNumber: 10060,
+                    lineNumber: 10048,
                     columnNumber: 6
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/EmailEncryption.tsx",
-                lineNumber: 10058,
+                lineNumber: 10046,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/EmailEncryption.tsx",
-        lineNumber: 9210,
+        lineNumber: 9200,
         columnNumber: 3
     }, this);
 }
@@ -15779,14 +15769,14 @@ function Settings({ user, darkMode }) {
                                         className: `mr-2 h-6 w-6 ${darkMode ? "text-indigo-400" : "text-indigo-600"}`
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 10264,
+                                        lineNumber: 10252,
                                         columnNumber: 7
                                     }, this),
                                     "Settings"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 10259,
+                                lineNumber: 10247,
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -15797,20 +15787,20 @@ function Settings({ user, darkMode }) {
                                         className: "mr-1.5 h-5 w-5"
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 10279,
+                                        lineNumber: 10267,
                                         columnNumber: 7
                                     }, this),
                                     "Back to Inbox"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 10271,
+                                lineNumber: 10259,
                                 columnNumber: 6
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 10258,
+                        lineNumber: 10246,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15832,7 +15822,7 @@ function Settings({ user, darkMode }) {
                                                         className: "jsx-3a8df4968e7e07ed" + " " + "h-12 w-12 rounded-full"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 10298,
+                                                        lineNumber: 10286,
                                                         columnNumber: 10
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -15843,7 +15833,7 @@ function Settings({ user, darkMode }) {
                                                                 children: user?.name
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 10309,
+                                                                lineNumber: 10297,
                                                                 columnNumber: 11
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -15851,24 +15841,24 @@ function Settings({ user, darkMode }) {
                                                                 children: user?.email
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 10316,
+                                                                lineNumber: 10304,
                                                                 columnNumber: 11
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 10308,
+                                                        lineNumber: 10296,
                                                         columnNumber: 10
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 10297,
+                                                lineNumber: 10285,
                                                 columnNumber: 9
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 10292,
+                                            lineNumber: 10280,
                                             columnNumber: 8
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -15883,14 +15873,14 @@ function Settings({ user, darkMode }) {
                                                             className: "mr-3 h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 10339,
+                                                            lineNumber: 10327,
                                                             columnNumber: 10
                                                         }, this),
                                                         "General"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 10327,
+                                                    lineNumber: 10315,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -15901,14 +15891,14 @@ function Settings({ user, darkMode }) {
                                                             className: "mr-3 h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 10354,
+                                                            lineNumber: 10342,
                                                             columnNumber: 10
                                                         }, this),
                                                         "Security"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 10342,
+                                                    lineNumber: 10330,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -15919,14 +15909,14 @@ function Settings({ user, darkMode }) {
                                                             className: "mr-3 h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 10369,
+                                                            lineNumber: 10357,
                                                             columnNumber: 10
                                                         }, this),
                                                         "Encryption Keys"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 10357,
+                                                    lineNumber: 10345,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -15937,14 +15927,14 @@ function Settings({ user, darkMode }) {
                                                             className: "mr-3 h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 10384,
+                                                            lineNumber: 10372,
                                                             columnNumber: 10
                                                         }, this),
                                                         "Connected Accounts"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 10372,
+                                                    lineNumber: 10360,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -15955,14 +15945,14 @@ function Settings({ user, darkMode }) {
                                                             className: "mr-3 h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 10399,
+                                                            lineNumber: 10387,
                                                             columnNumber: 10
                                                         }, this),
                                                         "Notifications"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 10387,
+                                                    lineNumber: 10375,
                                                     columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -15973,31 +15963,31 @@ function Settings({ user, darkMode }) {
                                                             className: "mr-3 h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 10414,
+                                                            lineNumber: 10402,
                                                             columnNumber: 10
                                                         }, this),
                                                         "Billing"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 10402,
+                                                    lineNumber: 10390,
                                                     columnNumber: 9
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 10326,
+                                            lineNumber: 10314,
                                             columnNumber: 8
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 10287,
+                                    lineNumber: 10275,
                                     columnNumber: 7
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 10286,
+                                lineNumber: 10274,
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16015,7 +16005,7 @@ function Settings({ user, darkMode }) {
                                                         children: "Profile Information"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 10432,
+                                                        lineNumber: 10420,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16030,7 +16020,7 @@ function Settings({ user, darkMode }) {
                                                                         children: "Name"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10441,
+                                                                        lineNumber: 10429,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16043,18 +16033,18 @@ function Settings({ user, darkMode }) {
                                                                             className: "jsx-3a8df4968e7e07ed" + " " + `shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border rounded-md ${darkMode ? "border-gray-600 bg-gray-700 text-white" : "border-gray-300 bg-white text-gray-900"}`
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 10450,
+                                                                            lineNumber: 10438,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10449,
+                                                                        lineNumber: 10437,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 10440,
+                                                                lineNumber: 10428,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16066,7 +16056,7 @@ function Settings({ user, darkMode }) {
                                                                         children: "Email"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10465,
+                                                                        lineNumber: 10453,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16079,18 +16069,18 @@ function Settings({ user, darkMode }) {
                                                                             className: "jsx-3a8df4968e7e07ed" + " " + `shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border rounded-md ${darkMode ? "border-gray-600 bg-gray-700 text-white" : "border-gray-300 bg-white text-gray-900"}`
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 10474,
+                                                                            lineNumber: 10462,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10473,
+                                                                        lineNumber: 10461,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 10464,
+                                                                lineNumber: 10452,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16102,7 +16092,7 @@ function Settings({ user, darkMode }) {
                                                                         children: "Profile Picture"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10489,
+                                                                        lineNumber: 10477,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16114,7 +16104,7 @@ function Settings({ user, darkMode }) {
                                                                                 className: "jsx-3a8df4968e7e07ed" + " " + "h-16 w-16 rounded-full"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 10498,
+                                                                                lineNumber: 10486,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -16125,26 +16115,26 @@ function Settings({ user, darkMode }) {
                                                                                         className: "mr-1.5 h-4 w-4"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 10516,
+                                                                                        lineNumber: 10504,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     "Change Picture"
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 10508,
+                                                                                lineNumber: 10496,
                                                                                 columnNumber: 14
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10497,
+                                                                        lineNumber: 10485,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 10488,
+                                                                lineNumber: 10476,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16156,7 +16146,7 @@ function Settings({ user, darkMode }) {
                                                                         children: "Language"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10523,
+                                                                        lineNumber: 10511,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16172,7 +16162,7 @@ function Settings({ user, darkMode }) {
                                                                                     children: "English"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 10541,
+                                                                                    lineNumber: 10529,
                                                                                     columnNumber: 15
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -16181,7 +16171,7 @@ function Settings({ user, darkMode }) {
                                                                                     children: "Français"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 10542,
+                                                                                    lineNumber: 10530,
                                                                                     columnNumber: 15
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -16190,7 +16180,7 @@ function Settings({ user, darkMode }) {
                                                                                     children: "Español"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 10543,
+                                                                                    lineNumber: 10531,
                                                                                     columnNumber: 15
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -16199,7 +16189,7 @@ function Settings({ user, darkMode }) {
                                                                                     children: "Deutsch"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 10544,
+                                                                                    lineNumber: 10532,
                                                                                     columnNumber: 15
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -16208,24 +16198,24 @@ function Settings({ user, darkMode }) {
                                                                                     children: "日本語"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 10545,
+                                                                                    lineNumber: 10533,
                                                                                     columnNumber: 15
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 10532,
+                                                                            lineNumber: 10520,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10531,
+                                                                        lineNumber: 10519,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 10522,
+                                                                lineNumber: 10510,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16237,7 +16227,7 @@ function Settings({ user, darkMode }) {
                                                                         children: "Timezone"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10551,
+                                                                        lineNumber: 10539,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16253,7 +16243,7 @@ function Settings({ user, darkMode }) {
                                                                                     children: "UTC (GMT+0)"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 10569,
+                                                                                    lineNumber: 10557,
                                                                                     columnNumber: 15
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -16262,7 +16252,7 @@ function Settings({ user, darkMode }) {
                                                                                     children: "Eastern Time (GMT-5)"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 10570,
+                                                                                    lineNumber: 10558,
                                                                                     columnNumber: 15
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -16271,7 +16261,7 @@ function Settings({ user, darkMode }) {
                                                                                     children: "Central Time (GMT-6)"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 10571,
+                                                                                    lineNumber: 10559,
                                                                                     columnNumber: 15
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -16280,7 +16270,7 @@ function Settings({ user, darkMode }) {
                                                                                     children: "Mountain Time (GMT-7)"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 10572,
+                                                                                    lineNumber: 10560,
                                                                                     columnNumber: 15
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -16289,24 +16279,24 @@ function Settings({ user, darkMode }) {
                                                                                     children: "Pacific Time (GMT-8)"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 10573,
+                                                                                    lineNumber: 10561,
                                                                                     columnNumber: 15
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 10560,
+                                                                            lineNumber: 10548,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10559,
+                                                                        lineNumber: 10547,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 10550,
+                                                                lineNumber: 10538,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16335,7 +16325,7 @@ function Settings({ user, darkMode }) {
                                                                                             className: "jsx-3a8df4968e7e07ed" + " " + "opacity-25"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 10600,
+                                                                                            lineNumber: 10588,
                                                                                             columnNumber: 18
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -16344,13 +16334,13 @@ function Settings({ user, darkMode }) {
                                                                                             className: "jsx-3a8df4968e7e07ed" + " " + "opacity-75"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 10608,
+                                                                                            lineNumber: 10596,
                                                                                             columnNumber: 18
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 10594,
+                                                                                    lineNumber: 10582,
                                                                                     columnNumber: 17
                                                                                 }, this),
                                                                                 "Saving..."
@@ -16361,7 +16351,7 @@ function Settings({ user, darkMode }) {
                                                                                     className: "mr-1.5 h-4 w-4"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 10618,
+                                                                                    lineNumber: 10606,
                                                                                     columnNumber: 17
                                                                                 }, this),
                                                                                 "Save Changes"
@@ -16369,29 +16359,29 @@ function Settings({ user, darkMode }) {
                                                                         }, void 0, true)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10584,
+                                                                        lineNumber: 10572,
                                                                         columnNumber: 14
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 10583,
+                                                                    lineNumber: 10571,
                                                                     columnNumber: 13
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 10578,
+                                                                lineNumber: 10566,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 10439,
+                                                        lineNumber: 10427,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 10431,
+                                                lineNumber: 10419,
                                                 columnNumber: 10
                                             }, this),
                                             activeTab === "security" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16402,7 +16392,7 @@ function Settings({ user, darkMode }) {
                                                         children: "Security Settings"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 10632,
+                                                        lineNumber: 10620,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16416,7 +16406,7 @@ function Settings({ user, darkMode }) {
                                                                         children: "Change Password"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10641,
+                                                                        lineNumber: 10629,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16431,7 +16421,7 @@ function Settings({ user, darkMode }) {
                                                                                         children: "Current Password"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 10650,
+                                                                                        lineNumber: 10638,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16443,18 +16433,18 @@ function Settings({ user, darkMode }) {
                                                                                             className: "jsx-3a8df4968e7e07ed" + " " + `shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border rounded-md ${darkMode ? "border-gray-600 bg-gray-700 text-white" : "border-gray-300 bg-white text-gray-900"}`
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 10659,
+                                                                                            lineNumber: 10647,
                                                                                             columnNumber: 16
                                                                                         }, this)
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 10658,
+                                                                                        lineNumber: 10646,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 10649,
+                                                                                lineNumber: 10637,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16466,7 +16456,7 @@ function Settings({ user, darkMode }) {
                                                                                         children: "New Password"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 10672,
+                                                                                        lineNumber: 10660,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16478,18 +16468,18 @@ function Settings({ user, darkMode }) {
                                                                                             className: "jsx-3a8df4968e7e07ed" + " " + `shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border rounded-md ${darkMode ? "border-gray-600 bg-gray-700 text-white" : "border-gray-300 bg-white text-gray-900"}`
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 10681,
+                                                                                            lineNumber: 10669,
                                                                                             columnNumber: 16
                                                                                         }, this)
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 10680,
+                                                                                        lineNumber: 10668,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 10671,
+                                                                                lineNumber: 10659,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16501,7 +16491,7 @@ function Settings({ user, darkMode }) {
                                                                                         children: "Confirm New Password"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 10694,
+                                                                                        lineNumber: 10682,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16513,18 +16503,18 @@ function Settings({ user, darkMode }) {
                                                                                             className: "jsx-3a8df4968e7e07ed" + " " + `shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border rounded-md ${darkMode ? "border-gray-600 bg-gray-700 text-white" : "border-gray-300 bg-white text-gray-900"}`
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 10703,
+                                                                                            lineNumber: 10691,
                                                                                             columnNumber: 16
                                                                                         }, this)
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 10702,
+                                                                                        lineNumber: 10690,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 10693,
+                                                                                lineNumber: 10681,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16537,31 +16527,31 @@ function Settings({ user, darkMode }) {
                                                                                             className: "mr-1.5 h-4 w-4"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 10720,
+                                                                                            lineNumber: 10708,
                                                                                             columnNumber: 16
                                                                                         }, this),
                                                                                         "Update Password"
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 10716,
+                                                                                    lineNumber: 10704,
                                                                                     columnNumber: 15
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 10715,
+                                                                                lineNumber: 10703,
                                                                                 columnNumber: 14
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10648,
+                                                                        lineNumber: 10636,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 10640,
+                                                                lineNumber: 10628,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16572,7 +16562,7 @@ function Settings({ user, darkMode }) {
                                                                         children: "Two-Factor Authentication"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10732,
+                                                                        lineNumber: 10720,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16588,12 +16578,12 @@ function Settings({ user, darkMode }) {
                                                                                             children: "Add an extra layer of security to your account by requiring a verification code in addition to your password."
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 10742,
+                                                                                            lineNumber: 10730,
                                                                                             columnNumber: 16
                                                                                         }, this)
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 10741,
+                                                                                        lineNumber: 10729,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16607,7 +16597,7 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "jsx-3a8df4968e7e07ed" + " " + `toggle-checkbox absolute block w-6 h-6 rounded-full border-4 appearance-none cursor-pointer transition-transform duration-200 ease-in-out ${darkMode ? "bg-gray-300 border-gray-600" : "bg-white border-gray-300"}`
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 10753,
+                                                                                                lineNumber: 10741,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -16615,19 +16605,19 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "jsx-3a8df4968e7e07ed" + " " + `toggle-label block overflow-hidden h-6 rounded-full cursor-pointer transition-colors duration-200 ease-in-out ${user?.twoFactorEnabled ? "bg-indigo-600" : darkMode ? "bg-gray-600" : "bg-gray-300"}`
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 10764,
+                                                                                                lineNumber: 10752,
                                                                                                 columnNumber: 16
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 10752,
+                                                                                        lineNumber: 10740,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 10740,
+                                                                                lineNumber: 10728,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             user?.twoFactorEnabled && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16641,14 +16631,14 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "mr-1 h-3 w-3"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 10786,
+                                                                                                lineNumber: 10774,
                                                                                                 columnNumber: 17
                                                                                             }, this),
                                                                                             "Configure"
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 10778,
+                                                                                        lineNumber: 10766,
                                                                                         columnNumber: 16
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -16659,32 +16649,32 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "mr-1 h-3 w-3"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 10797,
+                                                                                                lineNumber: 10785,
                                                                                                 columnNumber: 17
                                                                                             }, this),
                                                                                             "Reset Backup Codes"
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 10789,
+                                                                                        lineNumber: 10777,
                                                                                         columnNumber: 16
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 10777,
+                                                                                lineNumber: 10765,
                                                                                 columnNumber: 15
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10739,
+                                                                        lineNumber: 10727,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 10727,
+                                                                lineNumber: 10715,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16695,7 +16685,7 @@ function Settings({ user, darkMode }) {
                                                                         children: "Login History"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10810,
+                                                                        lineNumber: 10798,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -16703,7 +16693,7 @@ function Settings({ user, darkMode }) {
                                                                         children: "Recent login activity for your account."
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10817,
+                                                                        lineNumber: 10805,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16746,7 +16736,7 @@ function Settings({ user, darkMode }) {
                                                                                                                     className: "h-5 w-5 text-gray-400 mr-3"
                                                                                                                 }, void 0, false, {
                                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                                    lineNumber: 10861,
+                                                                                                                    lineNumber: 10849,
                                                                                                                     columnNumber: 21
                                                                                                                 }, this),
                                                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -16754,7 +16744,7 @@ function Settings({ user, darkMode }) {
                                                                                                                     children: session.device
                                                                                                                 }, void 0, false, {
                                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                                    lineNumber: 10862,
+                                                                                                                    lineNumber: 10850,
                                                                                                                     columnNumber: 21
                                                                                                                 }, this),
                                                                                                                 session.current && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -16762,13 +16752,13 @@ function Settings({ user, darkMode }) {
                                                                                                                     children: "Current"
                                                                                                                 }, void 0, false, {
                                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                                    lineNumber: 10872,
+                                                                                                                    lineNumber: 10860,
                                                                                                                     columnNumber: 22
                                                                                                                 }, this)
                                                                                                             ]
                                                                                                         }, void 0, true, {
                                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                            lineNumber: 10860,
+                                                                                                            lineNumber: 10848,
                                                                                                             columnNumber: 20
                                                                                                         }, this),
                                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16779,18 +16769,18 @@ function Settings({ user, darkMode }) {
                                                                                                                 children: "Sign Out"
                                                                                                             }, void 0, false, {
                                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                                lineNumber: 10884,
+                                                                                                                lineNumber: 10872,
                                                                                                                 columnNumber: 21
                                                                                                             }, this)
                                                                                                         }, void 0, false, {
                                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                            lineNumber: 10883,
+                                                                                                            lineNumber: 10871,
                                                                                                             columnNumber: 20
                                                                                                         }, this)
                                                                                                     ]
                                                                                                 }, void 0, true, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 10859,
+                                                                                                    lineNumber: 10847,
                                                                                                     columnNumber: 19
                                                                                                 }, this),
                                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16805,19 +16795,19 @@ function Settings({ user, darkMode }) {
                                                                                                                         className: "flex-shrink-0 mr-1.5 h-4 w-4 text-gray-400"
                                                                                                                     }, void 0, false, {
                                                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                                        lineNumber: 10905,
+                                                                                                                        lineNumber: 10893,
                                                                                                                         columnNumber: 22
                                                                                                                     }, this),
                                                                                                                     session.location
                                                                                                                 ]
                                                                                                             }, void 0, true, {
                                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                                lineNumber: 10898,
+                                                                                                                lineNumber: 10886,
                                                                                                                 columnNumber: 21
                                                                                                             }, this)
                                                                                                         }, void 0, false, {
                                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                            lineNumber: 10897,
+                                                                                                            lineNumber: 10885,
                                                                                                             columnNumber: 20
                                                                                                         }, this),
                                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16827,7 +16817,7 @@ function Settings({ user, darkMode }) {
                                                                                                                     className: "flex-shrink-0 mr-1.5 h-4 w-4 text-gray-400"
                                                                                                                 }, void 0, false, {
                                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                                    lineNumber: 10916,
+                                                                                                                    lineNumber: 10904,
                                                                                                                     columnNumber: 21
                                                                                                                 }, this),
                                                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -16835,51 +16825,51 @@ function Settings({ user, darkMode }) {
                                                                                                                     children: session.date
                                                                                                                 }, void 0, false, {
                                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                                    lineNumber: 10917,
+                                                                                                                    lineNumber: 10905,
                                                                                                                     columnNumber: 21
                                                                                                                 }, this)
                                                                                                             ]
                                                                                                         }, void 0, true, {
                                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                            lineNumber: 10909,
+                                                                                                            lineNumber: 10897,
                                                                                                             columnNumber: 20
                                                                                                         }, this)
                                                                                                     ]
                                                                                                 }, void 0, true, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 10896,
+                                                                                                    lineNumber: 10884,
                                                                                                     columnNumber: 19
                                                                                                 }, this)
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 10858,
+                                                                                            lineNumber: 10846,
                                                                                             columnNumber: 18
                                                                                         }, this)
                                                                                     }, index, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 10857,
+                                                                                        lineNumber: 10845,
                                                                                         columnNumber: 17
                                                                                     }, this))
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 10832,
+                                                                                lineNumber: 10820,
                                                                                 columnNumber: 15
                                                                             }, this)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 10825,
+                                                                            lineNumber: 10813,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10824,
+                                                                        lineNumber: 10812,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 10805,
+                                                                lineNumber: 10793,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16890,7 +16880,7 @@ function Settings({ user, darkMode }) {
                                                                         children: "Delete Account"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10933,
+                                                                        lineNumber: 10921,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -16898,7 +16888,7 @@ function Settings({ user, darkMode }) {
                                                                         children: "Permanently delete your account and all associated data. This action cannot be undone."
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10940,
+                                                                        lineNumber: 10928,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16912,37 +16902,37 @@ function Settings({ user, darkMode }) {
                                                                                     className: "mr-1.5 h-4 w-4"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 10954,
+                                                                                    lineNumber: 10942,
                                                                                     columnNumber: 15
                                                                                 }, this),
                                                                                 "Delete Account"
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 10949,
+                                                                            lineNumber: 10937,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10948,
+                                                                        lineNumber: 10936,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 10928,
+                                                                lineNumber: 10916,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 10639,
+                                                        lineNumber: 10627,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 10631,
+                                                lineNumber: 10619,
                                                 columnNumber: 10
                                             }, this),
                                             activeTab === "encryption" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16956,7 +16946,7 @@ function Settings({ user, darkMode }) {
                                                                 children: "Encryption Keys"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 10967,
+                                                                lineNumber: 10955,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -16968,20 +16958,20 @@ function Settings({ user, darkMode }) {
                                                                         className: "mr-1.5 h-4 w-4"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10979,
+                                                                        lineNumber: 10967,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     "Add New Key"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 10974,
+                                                                lineNumber: 10962,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 10966,
+                                                        lineNumber: 10954,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -16995,12 +16985,12 @@ function Settings({ user, darkMode }) {
                                                                         className: `h-5 w-5 ${darkMode ? "text-indigo-400" : "text-indigo-600"}`
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 10993,
+                                                                        lineNumber: 10981,
                                                                         columnNumber: 14
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 10992,
+                                                                    lineNumber: 10980,
                                                                     columnNumber: 13
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17011,7 +17001,7 @@ function Settings({ user, darkMode }) {
                                                                             children: "About Encryption Keys"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 11000,
+                                                                            lineNumber: 10988,
                                                                             columnNumber: 14
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -17019,24 +17009,24 @@ function Settings({ user, darkMode }) {
                                                                             children: "Encryption keys are used to secure your emails. We recommend having at least one active key at all times. You can create multiple keys for different purposes or contacts."
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 11007,
+                                                                            lineNumber: 10995,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 10999,
+                                                                    lineNumber: 10987,
                                                                     columnNumber: 13
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 10991,
+                                                            lineNumber: 10979,
                                                             columnNumber: 12
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 10984,
+                                                        lineNumber: 10972,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17055,7 +17045,7 @@ function Settings({ user, darkMode }) {
                                                                                     children: "Default Key"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 11036,
+                                                                                    lineNumber: 11024,
                                                                                     columnNumber: 15
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -17063,18 +17053,18 @@ function Settings({ user, darkMode }) {
                                                                                     children: "Active"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 11043,
+                                                                                    lineNumber: 11031,
                                                                                     columnNumber: 15
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 11035,
+                                                                            lineNumber: 11023,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 11028,
+                                                                        lineNumber: 11016,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17094,7 +17084,7 @@ function Settings({ user, darkMode }) {
                                                                                                         children: "Algorithm:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                        lineNumber: 11066,
+                                                                                                        lineNumber: 11054,
                                                                                                         columnNumber: 17
                                                                                                     }, this),
                                                                                                     " ",
@@ -17102,7 +17092,7 @@ function Settings({ user, darkMode }) {
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11061,
+                                                                                                lineNumber: 11049,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -17113,7 +17103,7 @@ function Settings({ user, darkMode }) {
                                                                                                         children: "Created:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                        lineNumber: 11074,
+                                                                                                        lineNumber: 11062,
                                                                                                         columnNumber: 17
                                                                                                     }, this),
                                                                                                     " ",
@@ -17121,13 +17111,13 @@ function Settings({ user, darkMode }) {
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11069,
+                                                                                                lineNumber: 11057,
                                                                                                 columnNumber: 16
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11060,
+                                                                                        lineNumber: 11048,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17141,7 +17131,7 @@ function Settings({ user, darkMode }) {
                                                                                                         children: "Fingerprint:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                        lineNumber: 11084,
+                                                                                                        lineNumber: 11072,
                                                                                                         columnNumber: 17
                                                                                                     }, this),
                                                                                                     " ",
@@ -17150,13 +17140,13 @@ function Settings({ user, darkMode }) {
                                                                                                         children: "AB:CD:EF:12:34:56"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                        lineNumber: 11087,
+                                                                                                        lineNumber: 11075,
                                                                                                         columnNumber: 17
                                                                                                     }, this)
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11079,
+                                                                                                lineNumber: 11067,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -17167,7 +17157,7 @@ function Settings({ user, darkMode }) {
                                                                                                         children: "Expiration:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                        lineNumber: 11096,
+                                                                                                        lineNumber: 11084,
                                                                                                         columnNumber: 17
                                                                                                     }, this),
                                                                                                     " ",
@@ -17175,19 +17165,19 @@ function Settings({ user, darkMode }) {
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11091,
+                                                                                                lineNumber: 11079,
                                                                                                 columnNumber: 16
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11078,
+                                                                                        lineNumber: 11066,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11059,
+                                                                                lineNumber: 11047,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17201,14 +17191,14 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "mr-1 h-4 w-4"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11110,
+                                                                                                lineNumber: 11098,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             "Export"
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11102,
+                                                                                        lineNumber: 11090,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -17219,32 +17209,32 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "mr-1 h-4 w-4"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11121,
+                                                                                                lineNumber: 11109,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             "Renew"
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11113,
+                                                                                        lineNumber: 11101,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11101,
+                                                                                lineNumber: 11089,
                                                                                 columnNumber: 14
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 11054,
+                                                                        lineNumber: 11042,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 11023,
+                                                                lineNumber: 11011,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17260,7 +17250,7 @@ function Settings({ user, darkMode }) {
                                                                                     children: "Work Key"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 11142,
+                                                                                    lineNumber: 11130,
                                                                                     columnNumber: 15
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -17268,18 +17258,18 @@ function Settings({ user, darkMode }) {
                                                                                     children: "Inactive"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 11149,
+                                                                                    lineNumber: 11137,
                                                                                     columnNumber: 15
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 11141,
+                                                                            lineNumber: 11129,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 11134,
+                                                                        lineNumber: 11122,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17299,7 +17289,7 @@ function Settings({ user, darkMode }) {
                                                                                                         children: "Algorithm:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                        lineNumber: 11172,
+                                                                                                        lineNumber: 11160,
                                                                                                         columnNumber: 17
                                                                                                     }, this),
                                                                                                     " ",
@@ -17307,7 +17297,7 @@ function Settings({ user, darkMode }) {
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11167,
+                                                                                                lineNumber: 11155,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -17318,7 +17308,7 @@ function Settings({ user, darkMode }) {
                                                                                                         children: "Created:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                        lineNumber: 11180,
+                                                                                                        lineNumber: 11168,
                                                                                                         columnNumber: 17
                                                                                                     }, this),
                                                                                                     " ",
@@ -17327,13 +17317,13 @@ function Settings({ user, darkMode }) {
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11175,
+                                                                                                lineNumber: 11163,
                                                                                                 columnNumber: 16
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11166,
+                                                                                        lineNumber: 11154,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17347,7 +17337,7 @@ function Settings({ user, darkMode }) {
                                                                                                         children: "Fingerprint:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                        lineNumber: 11193,
+                                                                                                        lineNumber: 11181,
                                                                                                         columnNumber: 17
                                                                                                     }, this),
                                                                                                     " ",
@@ -17356,13 +17346,13 @@ function Settings({ user, darkMode }) {
                                                                                                         children: "XY:Z1:23:45:67:89"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                        lineNumber: 11196,
+                                                                                                        lineNumber: 11184,
                                                                                                         columnNumber: 17
                                                                                                     }, this)
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11188,
+                                                                                                lineNumber: 11176,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -17373,7 +17363,7 @@ function Settings({ user, darkMode }) {
                                                                                                         children: "Expiration:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                        lineNumber: 11205,
+                                                                                                        lineNumber: 11193,
                                                                                                         columnNumber: 17
                                                                                                     }, this),
                                                                                                     " ",
@@ -17382,19 +17372,19 @@ function Settings({ user, darkMode }) {
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11200,
+                                                                                                lineNumber: 11188,
                                                                                                 columnNumber: 16
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11187,
+                                                                                        lineNumber: 11175,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11165,
+                                                                                lineNumber: 11153,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17408,14 +17398,14 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "mr-1 h-4 w-4"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11222,
+                                                                                                lineNumber: 11210,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             "Export"
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11214,
+                                                                                        lineNumber: 11202,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -17426,44 +17416,44 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "mr-1 h-4 w-4"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11229,
+                                                                                                lineNumber: 11217,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             "Set as Active"
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11225,
+                                                                                        lineNumber: 11213,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11213,
+                                                                                lineNumber: 11201,
                                                                                 columnNumber: 14
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 11160,
+                                                                        lineNumber: 11148,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 11129,
+                                                                lineNumber: 11117,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 11021,
+                                                        lineNumber: 11009,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 10965,
+                                                lineNumber: 10953,
                                                 columnNumber: 10
                                             }, this),
                                             activeTab === "accounts" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17477,7 +17467,7 @@ function Settings({ user, darkMode }) {
                                                                 children: "Connected Email Accounts"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 11243,
+                                                                lineNumber: 11231,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -17489,20 +17479,20 @@ function Settings({ user, darkMode }) {
                                                                         className: "mr-1.5 h-4 w-4"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 11255,
+                                                                        lineNumber: 11243,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     "Add Account"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 11250,
+                                                                lineNumber: 11238,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 11242,
+                                                        lineNumber: 11230,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -17510,7 +17500,7 @@ function Settings({ user, darkMode }) {
                                                         children: "Connect your existing email accounts to send and receive encrypted emails through SecureEmail."
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 11260,
+                                                        lineNumber: 11248,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17538,7 +17528,7 @@ function Settings({ user, darkMode }) {
                                                                                                     className: "jsx-3a8df4968e7e07ed"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 11299,
+                                                                                                    lineNumber: 11287,
                                                                                                     columnNumber: 20
                                                                                                 }, this),
                                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -17547,7 +17537,7 @@ function Settings({ user, darkMode }) {
                                                                                                     className: "jsx-3a8df4968e7e07ed"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 11303,
+                                                                                                    lineNumber: 11291,
                                                                                                     columnNumber: 20
                                                                                                 }, this),
                                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -17556,7 +17546,7 @@ function Settings({ user, darkMode }) {
                                                                                                     className: "jsx-3a8df4968e7e07ed"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 11307,
+                                                                                                    lineNumber: 11295,
                                                                                                     columnNumber: 20
                                                                                                 }, this),
                                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -17565,18 +17555,18 @@ function Settings({ user, darkMode }) {
                                                                                                     className: "jsx-3a8df4968e7e07ed"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 11311,
+                                                                                                    lineNumber: 11299,
                                                                                                     columnNumber: 20
                                                                                                 }, this)
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 11290,
+                                                                                            lineNumber: 11278,
                                                                                             columnNumber: 19
                                                                                         }, this)
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11285,
+                                                                                        lineNumber: 11273,
                                                                                         columnNumber: 18
                                                                                     }, this),
                                                                                     account.provider === "outlook" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17592,7 +17582,7 @@ function Settings({ user, darkMode }) {
                                                                                                     className: "jsx-3a8df4968e7e07ed"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 11333,
+                                                                                                    lineNumber: 11321,
                                                                                                     columnNumber: 20
                                                                                                 }, this),
                                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -17601,18 +17591,18 @@ function Settings({ user, darkMode }) {
                                                                                                     className: "jsx-3a8df4968e7e07ed"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 11337,
+                                                                                                    lineNumber: 11325,
                                                                                                     columnNumber: 20
                                                                                                 }, this)
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 11324,
+                                                                                            lineNumber: 11312,
                                                                                             columnNumber: 19
                                                                                         }, this)
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11319,
+                                                                                        lineNumber: 11307,
                                                                                         columnNumber: 18
                                                                                     }, this),
                                                                                     account.provider === "yahoo" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17627,17 +17617,17 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "jsx-3a8df4968e7e07ed"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11361,
+                                                                                                lineNumber: 11349,
                                                                                                 columnNumber: 20
                                                                                             }, this)
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 11352,
+                                                                                            lineNumber: 11340,
                                                                                             columnNumber: 19
                                                                                         }, this)
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11345,
+                                                                                        lineNumber: 11333,
                                                                                         columnNumber: 18
                                                                                     }, this),
                                                                                     account.provider === "other" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17646,12 +17636,12 @@ function Settings({ user, darkMode }) {
                                                                                             className: `h-6 w-6 ${darkMode ? "text-gray-400" : "text-gray-600"}`
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 11374,
+                                                                                            lineNumber: 11362,
                                                                                             columnNumber: 19
                                                                                         }, this)
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11369,
+                                                                                        lineNumber: 11357,
                                                                                         columnNumber: 18
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17662,7 +17652,7 @@ function Settings({ user, darkMode }) {
                                                                                                 children: account.email
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11384,
+                                                                                                lineNumber: 11372,
                                                                                                 columnNumber: 18
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -17670,19 +17660,19 @@ function Settings({ user, darkMode }) {
                                                                                                 children: account.provider
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11391,
+                                                                                                lineNumber: 11379,
                                                                                                 columnNumber: 18
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11383,
+                                                                                        lineNumber: 11371,
                                                                                         columnNumber: 17
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11283,
+                                                                                lineNumber: 11271,
                                                                                 columnNumber: 16
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17693,7 +17683,7 @@ function Settings({ user, darkMode }) {
                                                                                         children: "Connected"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11403,
+                                                                                        lineNumber: 11391,
                                                                                         columnNumber: 17
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -17703,45 +17693,45 @@ function Settings({ user, darkMode }) {
                                                                                             className: "h-5 w-5"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 11420,
+                                                                                            lineNumber: 11408,
                                                                                             columnNumber: 18
                                                                                         }, this)
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11412,
+                                                                                        lineNumber: 11400,
                                                                                         columnNumber: 17
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11402,
+                                                                                lineNumber: 11390,
                                                                                 columnNumber: 16
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 11282,
+                                                                        lineNumber: 11270,
                                                                         columnNumber: 15
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 11277,
+                                                                    lineNumber: 11265,
                                                                     columnNumber: 14
                                                                 }, this)
                                                             }, account.id, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 11271,
+                                                                lineNumber: 11259,
                                                                 columnNumber: 13
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 11269,
+                                                        lineNumber: 11257,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 11241,
+                                                lineNumber: 11229,
                                                 columnNumber: 10
                                             }, this),
                                             activeTab === "notifications" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17752,7 +17742,7 @@ function Settings({ user, darkMode }) {
                                                         children: "Notification Preferences"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 11434,
+                                                        lineNumber: 11422,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -17760,7 +17750,7 @@ function Settings({ user, darkMode }) {
                                                         children: "Manage how and when you receive notifications about your secure emails."
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 11441,
+                                                        lineNumber: 11429,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17774,7 +17764,7 @@ function Settings({ user, darkMode }) {
                                                                         children: "Email Notifications"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 11453,
+                                                                        lineNumber: 11441,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17791,7 +17781,7 @@ function Settings({ user, darkMode }) {
                                                                                                 children: "New Message Notifications"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11463,
+                                                                                                lineNumber: 11451,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -17799,13 +17789,13 @@ function Settings({ user, darkMode }) {
                                                                                                 children: "Receive an email when you get a new encrypted message"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11470,
+                                                                                                lineNumber: 11458,
                                                                                                 columnNumber: 16
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11462,
+                                                                                        lineNumber: 11450,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17819,7 +17809,7 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "jsx-3a8df4968e7e07ed" + " " + `toggle-checkbox absolute block w-6 h-6 rounded-full border-4 appearance-none cursor-pointer transition-transform duration-200 ease-in-out ${darkMode ? "bg-gray-300 border-gray-600" : "bg-white border-gray-300"}`
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11480,
+                                                                                                lineNumber: 11468,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -17827,19 +17817,19 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "jsx-3a8df4968e7e07ed" + " " + "toggle-label block overflow-hidden h-6 rounded-full cursor-pointer transition-colors duration-200 ease-in-out bg-indigo-600"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11491,
+                                                                                                lineNumber: 11479,
                                                                                                 columnNumber: 16
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11479,
+                                                                                        lineNumber: 11467,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11461,
+                                                                                lineNumber: 11449,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17853,7 +17843,7 @@ function Settings({ user, darkMode }) {
                                                                                                 children: "Read Receipt Notifications"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11500,
+                                                                                                lineNumber: 11488,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -17861,13 +17851,13 @@ function Settings({ user, darkMode }) {
                                                                                                 children: "Receive an email when your sent messages are read"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11507,
+                                                                                                lineNumber: 11495,
                                                                                                 columnNumber: 16
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11499,
+                                                                                        lineNumber: 11487,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17881,7 +17871,7 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "jsx-3a8df4968e7e07ed" + " " + `toggle-checkbox absolute block w-6 h-6 rounded-full border-4 appearance-none cursor-pointer transition-transform duration-200 ease-in-out ${darkMode ? "bg-gray-300 border-gray-600" : "bg-white border-gray-300"}`
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11517,
+                                                                                                lineNumber: 11505,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -17889,19 +17879,19 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "jsx-3a8df4968e7e07ed" + " " + "toggle-label block overflow-hidden h-6 rounded-full cursor-pointer transition-colors duration-200 ease-in-out bg-indigo-600"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11528,
+                                                                                                lineNumber: 11516,
                                                                                                 columnNumber: 16
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11516,
+                                                                                        lineNumber: 11504,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11498,
+                                                                                lineNumber: 11486,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17915,7 +17905,7 @@ function Settings({ user, darkMode }) {
                                                                                                 children: "Expiring Message Reminders"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11537,
+                                                                                                lineNumber: 11525,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -17923,13 +17913,13 @@ function Settings({ user, darkMode }) {
                                                                                                 children: "Receive an email before your messages are set to expire"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11544,
+                                                                                                lineNumber: 11532,
                                                                                                 columnNumber: 16
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11536,
+                                                                                        lineNumber: 11524,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17943,7 +17933,7 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "jsx-3a8df4968e7e07ed" + " " + `toggle-checkbox absolute block w-6 h-6 rounded-full border-4 appearance-none cursor-pointer transition-transform duration-200 ease-in-out ${darkMode ? "bg-gray-300 border-gray-600" : "bg-white border-gray-300"}`
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11554,
+                                                                                                lineNumber: 11542,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -17951,31 +17941,31 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "jsx-3a8df4968e7e07ed" + " " + "toggle-label block overflow-hidden h-6 rounded-full cursor-pointer transition-colors duration-200 ease-in-out bg-indigo-600"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11565,
+                                                                                                lineNumber: 11553,
                                                                                                 columnNumber: 16
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11553,
+                                                                                        lineNumber: 11541,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11535,
+                                                                                lineNumber: 11523,
                                                                                 columnNumber: 14
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 11460,
+                                                                        lineNumber: 11448,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 11452,
+                                                                lineNumber: 11440,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -17986,7 +17976,7 @@ function Settings({ user, darkMode }) {
                                                                         children: "In-App Notifications"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 11580,
+                                                                        lineNumber: 11568,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18003,7 +17993,7 @@ function Settings({ user, darkMode }) {
                                                                                                 children: "Desktop Notifications"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11590,
+                                                                                                lineNumber: 11578,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -18011,13 +18001,13 @@ function Settings({ user, darkMode }) {
                                                                                                 children: "Show browser notifications when you receive new messages"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11597,
+                                                                                                lineNumber: 11585,
                                                                                                 columnNumber: 16
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11589,
+                                                                                        lineNumber: 11577,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18031,7 +18021,7 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "jsx-3a8df4968e7e07ed" + " " + `toggle-checkbox absolute block w-6 h-6 rounded-full border-4 appearance-none cursor-pointer transition-transform duration-200 ease-in-out ${darkMode ? "bg-gray-300 border-gray-600" : "bg-white border-gray-300"}`
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11607,
+                                                                                                lineNumber: 11595,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -18039,19 +18029,19 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "jsx-3a8df4968e7e07ed" + " " + "toggle-label block overflow-hidden h-6 rounded-full cursor-pointer transition-colors duration-200 ease-in-out bg-indigo-600"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11618,
+                                                                                                lineNumber: 11606,
                                                                                                 columnNumber: 16
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11606,
+                                                                                        lineNumber: 11594,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11588,
+                                                                                lineNumber: 11576,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18065,7 +18055,7 @@ function Settings({ user, darkMode }) {
                                                                                                 children: "Sound Alerts"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11627,
+                                                                                                lineNumber: 11615,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -18073,13 +18063,13 @@ function Settings({ user, darkMode }) {
                                                                                                 children: "Play a sound when you receive new messages"
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11634,
+                                                                                                lineNumber: 11622,
                                                                                                 columnNumber: 16
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11626,
+                                                                                        lineNumber: 11614,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18093,7 +18083,7 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "jsx-3a8df4968e7e07ed" + " " + `toggle-checkbox absolute block w-6 h-6 rounded-full border-4 appearance-none cursor-pointer transition-transform duration-200 ease-in-out ${darkMode ? "bg-gray-300 border-gray-600" : "bg-white border-gray-300"}`
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11643,
+                                                                                                lineNumber: 11631,
                                                                                                 columnNumber: 16
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -18101,31 +18091,31 @@ function Settings({ user, darkMode }) {
                                                                                                 className: "jsx-3a8df4968e7e07ed" + " " + `toggle-label block overflow-hidden h-6 rounded-full cursor-pointer transition-colors duration-200 ease-in-out ${darkMode ? "bg-gray-600" : "bg-gray-300"}`
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11654,
+                                                                                                lineNumber: 11642,
                                                                                                 columnNumber: 16
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11642,
+                                                                                        lineNumber: 11630,
                                                                                         columnNumber: 15
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11625,
+                                                                                lineNumber: 11613,
                                                                                 columnNumber: 14
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 11587,
+                                                                        lineNumber: 11575,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 11575,
+                                                                lineNumber: 11563,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18140,36 +18130,36 @@ function Settings({ user, darkMode }) {
                                                                                 className: "mr-1.5 h-4 w-4"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11676,
+                                                                                lineNumber: 11664,
                                                                                 columnNumber: 15
                                                                             }, this),
                                                                             "Save Preferences"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 11672,
+                                                                        lineNumber: 11660,
                                                                         columnNumber: 14
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 11671,
+                                                                    lineNumber: 11659,
                                                                     columnNumber: 13
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 11666,
+                                                                lineNumber: 11654,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 11450,
+                                                        lineNumber: 11438,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 11433,
+                                                lineNumber: 11421,
                                                 columnNumber: 10
                                             }, this),
                                             activeTab === "billing" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18180,7 +18170,7 @@ function Settings({ user, darkMode }) {
                                                         children: "Billing and Subscription"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 11688,
+                                                        lineNumber: 11676,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18197,7 +18187,7 @@ function Settings({ user, darkMode }) {
                                                                                 children: "Current Plan"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11700,
+                                                                                lineNumber: 11688,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -18205,7 +18195,7 @@ function Settings({ user, darkMode }) {
                                                                                 children: "Pro Plan"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11703,
+                                                                                lineNumber: 11691,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18213,7 +18203,7 @@ function Settings({ user, darkMode }) {
                                                                                 children: "$4.99 / month"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11704,
+                                                                                lineNumber: 11692,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -18221,13 +18211,13 @@ function Settings({ user, darkMode }) {
                                                                                 children: "Your next billing date is July 15, 2025"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11707,
+                                                                                lineNumber: 11695,
                                                                                 columnNumber: 14
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 11699,
+                                                                        lineNumber: 11687,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -18235,13 +18225,13 @@ function Settings({ user, darkMode }) {
                                                                         children: "Upgrade Plan"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 11711,
+                                                                        lineNumber: 11699,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 11698,
+                                                                lineNumber: 11686,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18255,7 +18245,7 @@ function Settings({ user, darkMode }) {
                                                                                 children: "Storage"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11717,
+                                                                                lineNumber: 11705,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18263,7 +18253,7 @@ function Settings({ user, darkMode }) {
                                                                                 children: "1.5 GB / 5 GB"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11720,
+                                                                                lineNumber: 11708,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18275,18 +18265,18 @@ function Settings({ user, darkMode }) {
                                                                                     className: "jsx-3a8df4968e7e07ed" + " " + "bg-white h-1.5 rounded-full"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 11724,
+                                                                                    lineNumber: 11712,
                                                                                     columnNumber: 15
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11723,
+                                                                                lineNumber: 11711,
                                                                                 columnNumber: 14
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 11716,
+                                                                        lineNumber: 11704,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18297,7 +18287,7 @@ function Settings({ user, darkMode }) {
                                                                                 children: "Email Accounts"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11731,
+                                                                                lineNumber: 11719,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18305,7 +18295,7 @@ function Settings({ user, darkMode }) {
                                                                                 children: "1 / 5"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11734,
+                                                                                lineNumber: 11722,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18317,18 +18307,18 @@ function Settings({ user, darkMode }) {
                                                                                     className: "jsx-3a8df4968e7e07ed" + " " + "bg-white h-1.5 rounded-full"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 11738,
+                                                                                    lineNumber: 11726,
                                                                                     columnNumber: 15
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11737,
+                                                                                lineNumber: 11725,
                                                                                 columnNumber: 14
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 11730,
+                                                                        lineNumber: 11718,
                                                                         columnNumber: 13
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18339,7 +18329,7 @@ function Settings({ user, darkMode }) {
                                                                                 children: "Features"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11745,
+                                                                                lineNumber: 11733,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18347,7 +18337,7 @@ function Settings({ user, darkMode }) {
                                                                                 children: "All Pro Features"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11748,
+                                                                                lineNumber: 11736,
                                                                                 columnNumber: 14
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18357,32 +18347,32 @@ function Settings({ user, darkMode }) {
                                                                                         className: "inline-block h-3 w-3 mr-1"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11752,
+                                                                                        lineNumber: 11740,
                                                                                         columnNumber: 15
                                                                                     }, this),
                                                                                     "Self-destructing emails"
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11751,
+                                                                                lineNumber: 11739,
                                                                                 columnNumber: 14
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 11744,
+                                                                        lineNumber: 11732,
                                                                         columnNumber: 13
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 11715,
+                                                                lineNumber: 11703,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 11697,
+                                                        lineNumber: 11685,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18393,7 +18383,7 @@ function Settings({ user, darkMode }) {
                                                                 children: "Payment Method"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 11761,
+                                                                lineNumber: 11749,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18410,12 +18400,12 @@ function Settings({ user, darkMode }) {
                                                                                         className: `h-6 w-6 ${darkMode ? "text-blue-400" : "text-blue-600"}`
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11782,
+                                                                                        lineNumber: 11770,
                                                                                         columnNumber: 16
                                                                                     }, this)
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 11777,
+                                                                                    lineNumber: 11765,
                                                                                     columnNumber: 15
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18426,7 +18416,7 @@ function Settings({ user, darkMode }) {
                                                                                             children: "Visa ending in 4242"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 11789,
+                                                                                            lineNumber: 11777,
                                                                                             columnNumber: 16
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -18434,19 +18424,19 @@ function Settings({ user, darkMode }) {
                                                                                             children: "Expires 12/2028"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 11796,
+                                                                                            lineNumber: 11784,
                                                                                             columnNumber: 16
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 11788,
+                                                                                    lineNumber: 11776,
                                                                                     columnNumber: 15
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 11776,
+                                                                            lineNumber: 11764,
                                                                             columnNumber: 14
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -18454,24 +18444,24 @@ function Settings({ user, darkMode }) {
                                                                             children: "Update"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                            lineNumber: 11805,
+                                                                            lineNumber: 11793,
                                                                             columnNumber: 14
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 11775,
+                                                                    lineNumber: 11763,
                                                                     columnNumber: 13
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 11768,
+                                                                lineNumber: 11756,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 11760,
+                                                        lineNumber: 11748,
                                                         columnNumber: 11
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18482,7 +18472,7 @@ function Settings({ user, darkMode }) {
                                                                 children: "Billing History"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 11820,
+                                                                lineNumber: 11808,
                                                                 columnNumber: 12
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18503,7 +18493,7 @@ function Settings({ user, darkMode }) {
                                                                                             children: "Date"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 11846,
+                                                                                            lineNumber: 11834,
                                                                                             columnNumber: 17
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -18512,7 +18502,7 @@ function Settings({ user, darkMode }) {
                                                                                             children: "Description"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 11854,
+                                                                                            lineNumber: 11842,
                                                                                             columnNumber: 17
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -18521,7 +18511,7 @@ function Settings({ user, darkMode }) {
                                                                                             children: "Amount"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 11862,
+                                                                                            lineNumber: 11850,
                                                                                             columnNumber: 17
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -18530,18 +18520,18 @@ function Settings({ user, darkMode }) {
                                                                                             children: "Receipt"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                            lineNumber: 11870,
+                                                                                            lineNumber: 11858,
                                                                                             columnNumber: 17
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                    lineNumber: 11845,
+                                                                                    lineNumber: 11833,
                                                                                     columnNumber: 16
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11840,
+                                                                                lineNumber: 11828,
                                                                                 columnNumber: 15
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -18570,7 +18560,7 @@ function Settings({ user, darkMode }) {
                                                                                                 children: invoice.date
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11905,
+                                                                                                lineNumber: 11893,
                                                                                                 columnNumber: 18
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -18578,7 +18568,7 @@ function Settings({ user, darkMode }) {
                                                                                                 children: invoice.description
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11912,
+                                                                                                lineNumber: 11900,
                                                                                                 columnNumber: 18
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -18586,7 +18576,7 @@ function Settings({ user, darkMode }) {
                                                                                                 children: invoice.amount
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11921,
+                                                                                                lineNumber: 11909,
                                                                                                 columnNumber: 18
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -18596,79 +18586,79 @@ function Settings({ user, darkMode }) {
                                                                                                     children: "Download"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                    lineNumber: 11929,
+                                                                                                    lineNumber: 11917,
                                                                                                     columnNumber: 19
                                                                                                 }, this)
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                                lineNumber: 11928,
+                                                                                                lineNumber: 11916,
                                                                                                 columnNumber: 18
                                                                                             }, this)
                                                                                         ]
                                                                                     }, index, true, {
                                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                        lineNumber: 11904,
+                                                                                        lineNumber: 11892,
                                                                                         columnNumber: 17
                                                                                     }, this))
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                                lineNumber: 11880,
+                                                                                lineNumber: 11868,
                                                                                 columnNumber: 15
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 11835,
+                                                                        lineNumber: 11823,
                                                                         columnNumber: 14
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 11834,
+                                                                    lineNumber: 11822,
                                                                     columnNumber: 13
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 11827,
+                                                                lineNumber: 11815,
                                                                 columnNumber: 12
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 11819,
+                                                        lineNumber: 11807,
                                                         columnNumber: 11
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 11687,
+                                                lineNumber: 11675,
                                                 columnNumber: 10
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 10424,
+                                        lineNumber: 10412,
                                         columnNumber: 8
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 10423,
+                                    lineNumber: 10411,
                                     columnNumber: 7
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 10422,
+                                lineNumber: 10410,
                                 columnNumber: 6
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 10284,
+                        lineNumber: 10272,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/EmailEncryption.tsx",
-                lineNumber: 10257,
+                lineNumber: 10245,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -18707,12 +18697,12 @@ function Settings({ user, darkMode }) {
                                             className: `h-10 w-10 ${darkMode ? "text-red-400" : "text-red-600"}`
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 11977,
+                                            lineNumber: 11965,
                                             columnNumber: 10
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 11972,
+                                        lineNumber: 11960,
                                         columnNumber: 9
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -18720,7 +18710,7 @@ function Settings({ user, darkMode }) {
                                         children: "Delete Account"
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 11983,
+                                        lineNumber: 11971,
                                         columnNumber: 9
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -18728,7 +18718,7 @@ function Settings({ user, darkMode }) {
                                         children: "Are you sure you want to delete your account? This action is permanent and all of your data will be erased."
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 11990,
+                                        lineNumber: 11978,
                                         columnNumber: 9
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18742,12 +18732,12 @@ function Settings({ user, darkMode }) {
                                                         className: "h-5 w-5 text-red-400"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 12007,
+                                                        lineNumber: 11995,
                                                         columnNumber: 12
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12006,
+                                                    lineNumber: 11994,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18758,7 +18748,7 @@ function Settings({ user, darkMode }) {
                                                             children: "Warning"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 12010,
+                                                            lineNumber: 11998,
                                                             columnNumber: 12
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18771,7 +18761,7 @@ function Settings({ user, darkMode }) {
                                                                         children: "All your encrypted emails will be permanently deleted"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 12023,
+                                                                        lineNumber: 12011,
                                                                         columnNumber: 14
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -18779,7 +18769,7 @@ function Settings({ user, darkMode }) {
                                                                         children: "Your encryption keys will be permanently destroyed"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 12027,
+                                                                        lineNumber: 12015,
                                                                         columnNumber: 14
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -18787,7 +18777,7 @@ function Settings({ user, darkMode }) {
                                                                         children: "Connected email accounts will be disconnected"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 12030,
+                                                                        lineNumber: 12018,
                                                                         columnNumber: 14
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -18795,41 +18785,41 @@ function Settings({ user, darkMode }) {
                                                                         children: "This action cannot be undone"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 12031,
+                                                                        lineNumber: 12019,
                                                                         columnNumber: 14
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 12022,
+                                                                lineNumber: 12010,
                                                                 columnNumber: 13
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 12017,
+                                                            lineNumber: 12005,
                                                             columnNumber: 12
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12009,
+                                                    lineNumber: 11997,
                                                     columnNumber: 11
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 12005,
+                                            lineNumber: 11993,
                                             columnNumber: 10
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 11998,
+                                        lineNumber: 11986,
                                         columnNumber: 9
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 11971,
+                                lineNumber: 11959,
                                 columnNumber: 8
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18842,7 +18832,7 @@ function Settings({ user, darkMode }) {
                                         children: "Cancel"
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 12039,
+                                        lineNumber: 12027,
                                         columnNumber: 9
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -18853,36 +18843,36 @@ function Settings({ user, darkMode }) {
                                                 className: "mr-1.5 h-4 w-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                lineNumber: 12054,
+                                                lineNumber: 12042,
                                                 columnNumber: 10
                                             }, this),
                                             "Permanently Delete Account"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 12050,
+                                        lineNumber: 12038,
                                         columnNumber: 9
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                lineNumber: 12038,
+                                lineNumber: 12026,
                                 columnNumber: 8
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 11963,
+                        lineNumber: 11951,
                         columnNumber: 7
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/EmailEncryption.tsx",
-                    lineNumber: 11957,
+                    lineNumber: 11945,
                     columnNumber: 6
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/EmailEncryption.tsx",
-                lineNumber: 11955,
+                lineNumber: 11943,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -18922,7 +18912,7 @@ function Settings({ user, darkMode }) {
                                             children: "Generate New Encryption Key"
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 12082,
+                                            lineNumber: 12070,
                                             columnNumber: 10
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -18935,26 +18925,26 @@ function Settings({ user, darkMode }) {
                                                     children: "Close"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12098,
+                                                    lineNumber: 12086,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.X, {
                                                     className: "h-6 w-6"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12099,
+                                                    lineNumber: 12087,
                                                     columnNumber: 11
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 12089,
+                                            lineNumber: 12077,
                                             columnNumber: 10
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 12081,
+                                    lineNumber: 12069,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -18962,7 +18952,7 @@ function Settings({ user, darkMode }) {
                                     children: "Create a new encryption key for secure communication. You can have multiple keys for different purposes."
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 12102,
+                                    lineNumber: 12090,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -18978,7 +18968,7 @@ function Settings({ user, darkMode }) {
                                                     children: "Key Name"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12113,
+                                                    lineNumber: 12101,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -18993,12 +18983,12 @@ function Settings({ user, darkMode }) {
                                                         className: "jsx-3a8df4968e7e07ed" + " " + `shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border rounded-md ${darkMode ? "border-gray-600 bg-gray-700 text-white" : "border-gray-300 bg-white text-gray-900"}`
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 12122,
+                                                        lineNumber: 12110,
                                                         columnNumber: 12
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12121,
+                                                    lineNumber: 12109,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -19006,13 +18996,13 @@ function Settings({ user, darkMode }) {
                                                     children: "Choose a descriptive name to help you identify this key."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12136,
+                                                    lineNumber: 12124,
                                                     columnNumber: 11
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 12112,
+                                            lineNumber: 12100,
                                             columnNumber: 10
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -19024,7 +19014,7 @@ function Settings({ user, darkMode }) {
                                                     children: "Key Type"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12146,
+                                                    lineNumber: 12134,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -19040,7 +19030,7 @@ function Settings({ user, darkMode }) {
                                                                 children: "RSA (Recommended)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 12164,
+                                                                lineNumber: 12152,
                                                                 columnNumber: 13
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -19049,7 +19039,7 @@ function Settings({ user, darkMode }) {
                                                                 children: "ECC"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 12165,
+                                                                lineNumber: 12153,
                                                                 columnNumber: 13
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -19058,24 +19048,24 @@ function Settings({ user, darkMode }) {
                                                                 children: "Ed25519"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 12166,
+                                                                lineNumber: 12154,
                                                                 columnNumber: 13
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 12155,
+                                                        lineNumber: 12143,
                                                         columnNumber: 12
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12154,
+                                                    lineNumber: 12142,
                                                     columnNumber: 11
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 12145,
+                                            lineNumber: 12133,
                                             columnNumber: 10
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -19087,7 +19077,7 @@ function Settings({ user, darkMode }) {
                                                     children: "Key Size"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12172,
+                                                    lineNumber: 12160,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -19104,7 +19094,7 @@ function Settings({ user, darkMode }) {
                                                                 children: "2048 bits"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 12191,
+                                                                lineNumber: 12179,
                                                                 columnNumber: 13
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -19113,7 +19103,7 @@ function Settings({ user, darkMode }) {
                                                                 children: "3072 bits"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 12192,
+                                                                lineNumber: 12180,
                                                                 columnNumber: 13
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -19122,18 +19112,18 @@ function Settings({ user, darkMode }) {
                                                                 children: "4096 bits (Recommended)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 12193,
+                                                                lineNumber: 12181,
                                                                 columnNumber: 13
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 12181,
+                                                        lineNumber: 12169,
                                                         columnNumber: 12
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12180,
+                                                    lineNumber: 12168,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -19141,13 +19131,13 @@ function Settings({ user, darkMode }) {
                                                     children: "Larger keys provide more security but may be slower."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12196,
+                                                    lineNumber: 12184,
                                                     columnNumber: 11
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 12171,
+                                            lineNumber: 12159,
                                             columnNumber: 10
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -19159,7 +19149,7 @@ function Settings({ user, darkMode }) {
                                                     children: "Key Expiration"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12206,
+                                                    lineNumber: 12194,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -19175,7 +19165,7 @@ function Settings({ user, darkMode }) {
                                                                 children: "Never expires"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 12224,
+                                                                lineNumber: 12212,
                                                                 columnNumber: 13
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -19184,7 +19174,7 @@ function Settings({ user, darkMode }) {
                                                                 children: "6 months"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 12225,
+                                                                lineNumber: 12213,
                                                                 columnNumber: 13
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -19193,7 +19183,7 @@ function Settings({ user, darkMode }) {
                                                                 children: "1 year"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 12226,
+                                                                lineNumber: 12214,
                                                                 columnNumber: 13
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -19202,24 +19192,24 @@ function Settings({ user, darkMode }) {
                                                                 children: "2 years"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 12227,
+                                                                lineNumber: 12215,
                                                                 columnNumber: 13
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                        lineNumber: 12215,
+                                                        lineNumber: 12203,
                                                         columnNumber: 12
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12214,
+                                                    lineNumber: 12202,
                                                     columnNumber: 11
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 12205,
+                                            lineNumber: 12193,
                                             columnNumber: 10
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -19232,7 +19222,7 @@ function Settings({ user, darkMode }) {
                                                     children: "Cancel"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12233,
+                                                    lineNumber: 12221,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -19256,7 +19246,7 @@ function Settings({ user, darkMode }) {
                                                                         className: "jsx-3a8df4968e7e07ed" + " " + "opacity-25"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 12259,
+                                                                        lineNumber: 12247,
                                                                         columnNumber: 15
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -19265,13 +19255,13 @@ function Settings({ user, darkMode }) {
                                                                         className: "jsx-3a8df4968e7e07ed" + " " + "opacity-75"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 12267,
+                                                                        lineNumber: 12255,
                                                                         columnNumber: 15
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 12253,
+                                                                lineNumber: 12241,
                                                                 columnNumber: 14
                                                             }, this),
                                                             "Generating..."
@@ -19282,7 +19272,7 @@ function Settings({ user, darkMode }) {
                                                                 className: "mr-1.5 h-4 w-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 12277,
+                                                                lineNumber: 12265,
                                                                 columnNumber: 14
                                                             }, this),
                                                             "Generate Key"
@@ -19290,40 +19280,40 @@ function Settings({ user, darkMode }) {
                                                     }, void 0, true)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12244,
+                                                    lineNumber: 12232,
                                                     columnNumber: 11
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 12232,
+                                            lineNumber: 12220,
                                             columnNumber: 10
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 12111,
+                                    lineNumber: 12099,
                                     columnNumber: 9
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 12080,
+                            lineNumber: 12068,
                             columnNumber: 8
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 12072,
+                        lineNumber: 12060,
                         columnNumber: 7
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/EmailEncryption.tsx",
-                    lineNumber: 12066,
+                    lineNumber: 12054,
                     columnNumber: 6
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/EmailEncryption.tsx",
-                lineNumber: 12064,
+                lineNumber: 12052,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -19363,7 +19353,7 @@ function Settings({ user, darkMode }) {
                                             children: "Connect Email Account"
                                         }, void 0, false, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 12309,
+                                            lineNumber: 12297,
                                             columnNumber: 10
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -19376,26 +19366,26 @@ function Settings({ user, darkMode }) {
                                                     children: "Close"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12325,
+                                                    lineNumber: 12313,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.X, {
                                                     className: "h-6 w-6"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12326,
+                                                    lineNumber: 12314,
                                                     columnNumber: 11
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 12316,
+                                            lineNumber: 12304,
                                             columnNumber: 10
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 12308,
+                                    lineNumber: 12296,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -19403,7 +19393,7 @@ function Settings({ user, darkMode }) {
                                     children: "Connect your existing email accounts to send and receive encrypted emails through SecureEmail."
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 12329,
+                                    lineNumber: 12317,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -19429,7 +19419,7 @@ function Settings({ user, darkMode }) {
                                                                         className: "jsx-3a8df4968e7e07ed"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 12360,
+                                                                        lineNumber: 12348,
                                                                         columnNumber: 14
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -19438,7 +19428,7 @@ function Settings({ user, darkMode }) {
                                                                         className: "jsx-3a8df4968e7e07ed"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 12364,
+                                                                        lineNumber: 12352,
                                                                         columnNumber: 14
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -19447,7 +19437,7 @@ function Settings({ user, darkMode }) {
                                                                         className: "jsx-3a8df4968e7e07ed"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 12368,
+                                                                        lineNumber: 12356,
                                                                         columnNumber: 14
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -19456,18 +19446,18 @@ function Settings({ user, darkMode }) {
                                                                         className: "jsx-3a8df4968e7e07ed"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 12372,
+                                                                        lineNumber: 12360,
                                                                         columnNumber: 14
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 12353,
+                                                                lineNumber: 12341,
                                                                 columnNumber: 13
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 12348,
+                                                            lineNumber: 12336,
                                                             columnNumber: 12
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -19478,7 +19468,7 @@ function Settings({ user, darkMode }) {
                                                                     children: "Connect Gmail"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 12379,
+                                                                    lineNumber: 12367,
                                                                     columnNumber: 13
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -19486,32 +19476,32 @@ function Settings({ user, darkMode }) {
                                                                     children: "Secure your Gmail messages with end-to-end encryption"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 12386,
+                                                                    lineNumber: 12374,
                                                                     columnNumber: 13
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 12378,
+                                                            lineNumber: 12366,
                                                             columnNumber: 12
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12347,
+                                                    lineNumber: 12335,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.ArrowRight, {
                                                     className: "h-5 w-5 text-gray-400"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12395,
+                                                    lineNumber: 12383,
                                                     columnNumber: 11
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 12339,
+                                            lineNumber: 12327,
                                             columnNumber: 10
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -19534,7 +19524,7 @@ function Settings({ user, darkMode }) {
                                                                         className: "jsx-3a8df4968e7e07ed"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 12419,
+                                                                        lineNumber: 12407,
                                                                         columnNumber: 14
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -19543,18 +19533,18 @@ function Settings({ user, darkMode }) {
                                                                         className: "jsx-3a8df4968e7e07ed"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                                                        lineNumber: 12420,
+                                                                        lineNumber: 12408,
                                                                         columnNumber: 14
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 12412,
+                                                                lineNumber: 12400,
                                                                 columnNumber: 13
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 12407,
+                                                            lineNumber: 12395,
                                                             columnNumber: 12
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -19565,7 +19555,7 @@ function Settings({ user, darkMode }) {
                                                                     children: "Connect Outlook"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 12424,
+                                                                    lineNumber: 12412,
                                                                     columnNumber: 13
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -19573,32 +19563,32 @@ function Settings({ user, darkMode }) {
                                                                     children: "Secure your Outlook messages with end-to-end encryption"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 12431,
+                                                                    lineNumber: 12419,
                                                                     columnNumber: 13
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 12423,
+                                                            lineNumber: 12411,
                                                             columnNumber: 12
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12406,
+                                                    lineNumber: 12394,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.ArrowRight, {
                                                     className: "h-5 w-5 text-gray-400"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12441,
+                                                    lineNumber: 12429,
                                                     columnNumber: 11
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 12398,
+                                            lineNumber: 12386,
                                             columnNumber: 10
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -19620,17 +19610,17 @@ function Settings({ user, darkMode }) {
                                                                     className: "jsx-3a8df4968e7e07ed"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 12465,
+                                                                    lineNumber: 12453,
                                                                     columnNumber: 14
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 12458,
+                                                                lineNumber: 12446,
                                                                 columnNumber: 13
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 12453,
+                                                            lineNumber: 12441,
                                                             columnNumber: 12
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -19641,7 +19631,7 @@ function Settings({ user, darkMode }) {
                                                                     children: "Connect Yahoo Mail"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 12472,
+                                                                    lineNumber: 12460,
                                                                     columnNumber: 13
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -19649,32 +19639,32 @@ function Settings({ user, darkMode }) {
                                                                     children: "Secure your Yahoo messages with end-to-end encryption"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 12479,
+                                                                    lineNumber: 12467,
                                                                     columnNumber: 13
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 12471,
+                                                            lineNumber: 12459,
                                                             columnNumber: 12
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12452,
+                                                    lineNumber: 12440,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.ArrowRight, {
                                                     className: "h-5 w-5 text-gray-400"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12488,
+                                                    lineNumber: 12476,
                                                     columnNumber: 11
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 12444,
+                                            lineNumber: 12432,
                                             columnNumber: 10
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -19690,12 +19680,12 @@ function Settings({ user, darkMode }) {
                                                                 className: `h-6 w-6 ${darkMode ? "text-gray-400" : "text-gray-600"}`
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/EmailEncryption.tsx",
-                                                                lineNumber: 12505,
+                                                                lineNumber: 12493,
                                                                 columnNumber: 13
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 12500,
+                                                            lineNumber: 12488,
                                                             columnNumber: 12
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -19706,7 +19696,7 @@ function Settings({ user, darkMode }) {
                                                                     children: "Connect Other Email"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 12512,
+                                                                    lineNumber: 12500,
                                                                     columnNumber: 13
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -19714,38 +19704,38 @@ function Settings({ user, darkMode }) {
                                                                     children: "Connect any other email provider via IMAP/SMTP"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                                    lineNumber: 12519,
+                                                                    lineNumber: 12507,
                                                                     columnNumber: 13
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                                            lineNumber: 12511,
+                                                            lineNumber: 12499,
                                                             columnNumber: 12
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12499,
+                                                    lineNumber: 12487,
                                                     columnNumber: 11
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$lucide$2d$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.ArrowRight, {
                                                     className: "h-5 w-5 text-gray-400"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                                    lineNumber: 12528,
+                                                    lineNumber: 12516,
                                                     columnNumber: 11
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/EmailEncryption.tsx",
-                                            lineNumber: 12491,
+                                            lineNumber: 12479,
                                             columnNumber: 10
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 12338,
+                                    lineNumber: 12326,
                                     columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -19757,33 +19747,33 @@ function Settings({ user, darkMode }) {
                                         children: "Cancel"
                                     }, void 0, false, {
                                         fileName: "[project]/app/EmailEncryption.tsx",
-                                        lineNumber: 12533,
+                                        lineNumber: 12521,
                                         columnNumber: 10
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/EmailEncryption.tsx",
-                                    lineNumber: 12532,
+                                    lineNumber: 12520,
                                     columnNumber: 9
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/EmailEncryption.tsx",
-                            lineNumber: 12307,
+                            lineNumber: 12295,
                             columnNumber: 8
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/EmailEncryption.tsx",
-                        lineNumber: 12299,
+                        lineNumber: 12287,
                         columnNumber: 7
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/EmailEncryption.tsx",
-                    lineNumber: 12293,
+                    lineNumber: 12281,
                     columnNumber: 6
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/EmailEncryption.tsx",
-                lineNumber: 12291,
+                lineNumber: 12279,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -19793,7 +19783,7 @@ function Settings({ user, darkMode }) {
         ]
     }, void 0, true, {
         fileName: "[project]/app/EmailEncryption.tsx",
-        lineNumber: 10256,
+        lineNumber: 10244,
         columnNumber: 3
     }, this);
 }

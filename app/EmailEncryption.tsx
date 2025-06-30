@@ -218,7 +218,7 @@ function EmailEncryption() {
 							<Route
 								path="/security-setup"
 								element={
-									<SecuritySetup user={currentUser} darkMode={darkMode} />
+									<SecuritySetup darkMode={darkMode} />
 								}
 							/>
 							<Route
@@ -319,7 +319,7 @@ function LandingPage({
 			navigate("/dashboard");
 		}, 1500);
 	};
-	const scrollToSection = (sectionId: any) => {
+	const scrollToSection = (sectionId) => {
 		const section = document.getElementById(sectionId);
 		if (section) {
 			section.scrollIntoView({ behavior: "smooth" });
@@ -4482,21 +4482,14 @@ function Register({
 }
 
 // Enhanced SecuritySetup Component
-function SecuritySetup({
-	user,
-	darkMode,
-}: {
-	user: User | null;
-	darkMode: boolean;
-}) {
+function SecuritySetup({ darkMode }: { darkMode: boolean }) {
 	const navigate = useNavigate();
 	const [step, setStep] = useState(1);
 	const [isLoading, setIsLoading] = useState(false);
 	const [twoFactorEnabled, setTwoFactorEnabled] = useState(false);
 	const [backupCodesVisible, setBackupCodesVisible] = useState(false);
 	const [generatingKeys, setGeneratingKeys] = useState(false);
-	const [keyGenerated, setKeyGenerated] = useState(false);
-	const [activeKeyId, setActiveKeyId] = useState("default");
+
 	const [keys, setKeys] = useState([
 		{
 			id: "default",
@@ -4567,13 +4560,13 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random()
 
 			setKeys((prev) => [...prev, newKey]);
 			setGeneratingKeys(false);
-			setKeyGenerated(true);
+
 			toast.success("New encryption keys generated successfully!");
 		}, 2000);
 	};
 
 	// Export key functionality
-	const handleExportKey = (keyData: any, type = "both") => {
+	const handleExportKey = (keyData, type = "both") => {
 		try {
 			let content = "";
 			let filename = "";
@@ -4608,7 +4601,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random()
 	};
 
 	// Set key as active
-	const handleSetKeyActive = (keyId: any) => {
+	const handleSetKeyActive = (keyId) => {
 		setPendingKeyAction({ type: "activate", keyId });
 		setShowConfirmDialog(true);
 	};
@@ -4622,7 +4615,7 @@ ${Math.random().toString(36).substring(2, 15)}${Math.random()
 					isActive: key.id === pendingKeyAction.keyId,
 				}))
 			);
-			setActiveKeyId(pendingKeyAction.keyId);
+
 			toast.success("Encryption key activated successfully!");
 		}
 		setShowConfirmDialog(false);
@@ -5357,7 +5350,7 @@ function Dashboard({
 	const [showComposeModal, setShowComposeModal] = useState<boolean>(false);
 	const [showNotifications, setShowNotifications] = useState<boolean>(false);
 	const [showUserMenu, setShowUserMenu] = useState<boolean>(false);
-	const [labels, setLabels] = useState<Label[]>([
+	const [labels] = useState<Label[]>([
 		{ id: "1", name: "Work", color: "blue" },
 		{ id: "2", name: "Personal", color: "green" },
 		{ id: "3", name: "Urgent", color: "red" },
@@ -6997,7 +6990,6 @@ function Compose({
 	darkMode: boolean;
 	onClose?: () => void;
 }) {
-	const navigate = useNavigate();
 	const [recipient, setRecipient] = useState("");
 	const [subject, setSubject] = useState("");
 	const [message, setMessage] = useState("");
@@ -7014,7 +7006,7 @@ function Compose({
 	const [showEncryptedPreview, setShowEncryptedPreview] = useState(false);
 	const [isSending, setIsSending] = useState(false);
 	const [isMinimized, setIsMinimized] = useState(false);
-	const [isDraft, setIsDraft] = useState(false);
+
 	const [recipients, setRecipients] = useState<string[]>([]);
 	const [ccVisible, setCcVisible] = useState(false);
 	const [bccVisible, setBccVisible] = useState(false);
@@ -7036,7 +7028,6 @@ function Compose({
 	const [customExpiryTime, setCustomExpiryTime] = useState("");
 	const [showCustomExpiry, setShowCustomExpiry] = useState(false);
 	const [formTouched, setFormTouched] = useState(false);
-	const [showEmailFormatting, setShowEmailFormatting] = useState(false);
 
 	// File input ref for custom button
 	const fileInputRef = useRef<HTMLInputElement>(null);
@@ -7261,7 +7252,6 @@ function Compose({
 
 			setDraftSaving(false);
 			setDraftSaved(true);
-			setIsDraft(true);
 
 			if (!silent) {
 				toast.success("Email saved as draft");
@@ -9196,7 +9186,7 @@ function ViewEmail({
 	};
 
 	// Handle download
-	const handleDownload = (attachmentId: string) => {
+	const handleDownload = () => {
 		setIsDownloading(true);
 
 		// Simulate download
@@ -9619,9 +9609,7 @@ PzX5WqSrG7IkMlO2NeQfJhCaB8A4tB9wZ2EpQmFs8K7Lx1Dj3H6Y9o0vRnTbUcVd
 																				</span>
 																			)}
 																			<button
-																				onClick={() =>
-																					handleDownload(attachment.id)
-																				}
+																				onClick={() => handleDownload()}
 																				disabled={isDownloading}
 																				className={`inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200 ${
 																					isDownloading
