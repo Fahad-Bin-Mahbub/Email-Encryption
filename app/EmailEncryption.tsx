@@ -6,7 +6,6 @@ import {
 	Route,
 	Link,
 	useNavigate,
-	useLocation,
 	useParams,
 } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -217,9 +216,7 @@ function EmailEncryption() {
 							/>
 							<Route
 								path="/security-setup"
-								element={
-									<SecuritySetup darkMode={darkMode} />
-								}
+								element={<SecuritySetup darkMode={darkMode} />}
 							/>
 							<Route
 								path="/dashboard/*"
