@@ -153,7 +153,7 @@ function EmailEncryption() {
 							darkMode ? "text-white" : "text-gray-800"
 						}`}
 					>
-						Loading SecureEmail...
+						Loading PrivaMail...
 					</h2>
 					<p
 						className={`text-sm mt-2 ${
@@ -349,7 +349,7 @@ function LandingPage({
 											: "from-indigo-600 to-purple-600"
 									}`}
 								>
-									SecureEmail
+									PrivaMail
 								</span>
 							</div>
 							<div className="hidden sm:ml-8 sm:flex sm:space-x-8 items-center">
@@ -1537,7 +1537,7 @@ function LandingPage({
 																	darkMode ? "text-white" : "text-gray-900"
 																}`}
 															>
-																SecureEmail
+																PrivaMail
 															</span>
 														</div>
 														<span
@@ -1786,7 +1786,7 @@ function LandingPage({
 																darkMode ? "text-gray-400" : "text-gray-500"
 															}`}
 														>
-															No one, not even SecureEmail, can read your
+															No one, not even PrivaMail, can read your
 															messages
 														</p>
 													</div>
@@ -1815,7 +1815,7 @@ function LandingPage({
 											>
 												Your message is encrypted and can only be decrypted by
 												the intended recipient, even if they don't use
-												SecureEmail.
+												PrivaMail.
 											</p>
 											<div
 												className={`mt-6 rounded-lg p-4 shadow-md inline-block text-left ${
@@ -2155,7 +2155,7 @@ function LandingPage({
 										darkMode ? "text-gray-300" : "text-gray-600"
 									}`}
 								>
-									Join thousands of users who trust SecureEmail for their
+									Join thousands of users who trust PrivaMail for their
 									confidential communications.
 								</p>
 								<div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -2665,20 +2665,20 @@ function LandingPage({
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 							{[
 								{
-									question: "How secure is SecureEmail?",
+									question: "How secure is PrivaMail?",
 									answer:
-										"SecureEmail uses AES-256 bit encryption, the same standard used by banks and governments worldwide. Your messages are end-to-end encrypted, meaning only you and your recipient can read them.",
+										"PrivaMail uses AES-256 bit encryption, the same standard used by banks and governments worldwide. Your messages are end-to-end encrypted, meaning only you and your recipient can read them.",
 								},
 								{
-									question: "Can I use SecureEmail with my existing email?",
+									question: "Can I use PrivaMail with my existing email?",
 									answer:
-										"Yes! SecureEmail works with all major email providers including Gmail, Outlook, Yahoo, and more. There's no need to create a new email address.",
+										"Yes! PrivaMail works with all major email providers including Gmail, Outlook, Yahoo, and more. There's no need to create a new email address.",
 								},
 								{
 									question:
-										"What happens if the recipient doesn't use SecureEmail?",
+										"What happens if the recipient doesn't use PrivaMail?",
 									answer:
-										"Recipients who don't use SecureEmail will receive a secure link to view your encrypted message. You can also add password protection for additional security.",
+										"Recipients who don't use PrivaMail will receive a secure link to view your encrypted message. You can also add password protection for additional security.",
 								},
 								{
 									question: "Is there a limit to file attachments?",
@@ -2761,7 +2761,7 @@ function LandingPage({
 											: "from-indigo-600 to-purple-600"
 									}`}
 								>
-									SecureEmail
+									PrivaMail
 								</span>
 							</div>
 							<p
@@ -2928,7 +2928,7 @@ function LandingPage({
 						}`}
 					>
 						<p className="text-base text-gray-400 text-center sm:text-left">
-							&copy; {new Date().getFullYear()} SecureEmail. All rights
+							&copy; {new Date().getFullYear()} PrivaMail. All rights
 							reserved.
 						</p>
 						<div className="mt-4 sm:mt-0">
@@ -3205,7 +3205,7 @@ function Login({
 							darkMode ? "text-gray-400" : "text-gray-600"
 						}`}
 					>
-						Sign in to your SecureEmail account or{" "}
+						Sign in to your PrivaMail account or{" "}
 						<Link
 							to="/register"
 							className={`font-medium transition-colors duration-200 ${
@@ -3476,7 +3476,7 @@ function Login({
 							) : (
 								<div className="flex items-center">
 									<LucideIcons.LogIn className="mr-2 h-5 w-5" />
-									Sign in to SecureEmail
+									Sign in to PrivaMail
 								</div>
 							)}
 						</button>
@@ -4510,7 +4510,7 @@ function SecuritySetup({ darkMode }: { darkMode: boolean }) {
 
 	// Generate QR code URL (in a real app, this would be a real QR code)
 	const twoFactorQrCode =
-		"https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=otpauth://totp/SecureEmail:user@example.com?secret=JBSWY3DPEHPK3PXP&issuer=SecureEmail";
+		"https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=otpauth://totp/PrivaMail:user@example.com?secret=JBSWY3DPEHPK3PXP&issuer=PrivaMail";
 
 	// Handle completion of security setup
 	const handleComplete = () => {
@@ -5429,8 +5429,8 @@ function Dashboard({
 					id: "1",
 					from: "john.doe@example.com",
 					to: [user?.email || "you@example.com"],
-					subject: "Welcome to SecureEmail!",
-					body: "Thank you for joining SecureEmail. We are excited to have you on board. This is a secure platform for all your email communication needs.",
+					subject: "Welcome to PrivaMail!",
+					body: "Thank you for joining PrivaMail. We are excited to have you on board. This is a secure platform for all your email communication needs.",
 					attachments: [],
 					isEncrypted: true,
 					encryptionLevel: "high",
@@ -5482,7 +5482,7 @@ function Dashboard({
 				},
 				{
 					id: "4",
-					from: "team@secureemail.com",
+					from: "team@privamail.com",
 					to: [user?.email || "you@example.com"],
 					subject: "Your Encryption Keys",
 					body: "Your encryption keys have been generated successfully. Remember to keep them safe!",
@@ -5521,7 +5521,7 @@ function Dashboard({
 				{
 					id: "6",
 					from: user?.email || "you@example.com",
-					to: ["support@secureemail.com"],
+					to: ["support@orivamail.com"],
 					subject: "Question about Features",
 					body: "I was wondering if you could provide more information about the expiration feature for emails.",
 					attachments: [],
@@ -5586,7 +5586,7 @@ function Dashboard({
 				},
 				{
 					id: "10",
-					from: "security-alerts@secureemail.com",
+					from: "security-alerts@privamail.com",
 					to: [user?.email || "you@example.com"],
 					subject: "Security Alert: New Device Login",
 					body: "We detected a new login to your account from a new device. If this was you, you can ignore this message.",
@@ -5885,7 +5885,7 @@ function Dashboard({
 									: "from-indigo-600 to-purple-600"
 							}`}
 						>
-							SecureEmail
+							PrivaMail
 						</span>
 					</div>
 
@@ -6515,7 +6515,7 @@ function Dashboard({
 													: "from-indigo-600 to-purple-600"
 											}`}
 										>
-											SecureEmail
+											PrivaMail
 										</span>
 									</div>
 									<button
@@ -8276,7 +8276,7 @@ function Compose({
 													}`}
 												>
 													Require a password to view this message, even if the
-													recipient doesn't use SecureEmail.
+													recipient doesn't use PrivaMail.
 												</p>
 
 												{/* Password and hint fields (only if password protection is enabled) */}
@@ -9058,8 +9058,8 @@ function ViewEmail({
 				id: "1",
 				from: "john.doe@example.com",
 				to: [user?.email || "you@example.com"],
-				subject: "Welcome to SecureEmail!",
-				body: "Thank you for joining SecureEmail. We are excited to have you on board. This is a secure platform for all your email communication needs.\n\nWith SecureEmail, you can send end-to-end encrypted emails to anyone, even if they don't use our service. Your data is protected with military-grade encryption, ensuring that only you and your intended recipients can read your messages.\n\nSome key features include:\n- End-to-end encryption\n- Self-destructing messages\n- Password protection\n- Encrypted attachments\n\nIf you have any questions, feel free to reply to this email or contact our support team.\n\nBest regards,\nThe SecureEmail Team",
+				subject: "Welcome to PrivaMail!",
+				body: "Thank you for joining PrivaMail. We are excited to have you on board. This is a secure platform for all your email communication needs.\n\nWith PrivaMail, you can send end-to-end encrypted emails to anyone, even if they don't use our service. Your data is protected with military-grade encryption, ensuring that only you and your intended recipients can read your messages.\n\nSome key features include:\n- End-to-end encryption\n- Self-destructing messages\n- Password protection\n- Encrypted attachments\n\nIf you have any questions, feel free to reply to this email or contact our support team.\n\nBest regards,\nThe PrivaMail Team",
 				attachments: [
 					{
 						id: "att1",
@@ -9113,8 +9113,8 @@ function ViewEmail({
 			return;
 		}
 
-		// For demo, just check if password is "secureemail" (the hint says "name of our service lowercase")
-		if (password.toLowerCase() === "secureemail") {
+		// For demo, just check if password is "PrivaMail" (the hint says "name of our service lowercase")
+		if (password.toLowerCase() === "privamail") {
 			setIsDecrypted(true);
 			setShowPasswordModal(false);
 			toast.success("Email decrypted successfully");
@@ -11251,7 +11251,7 @@ function Settings({
 											}`}
 										>
 											Connect your existing email accounts to send and receive
-											encrypted emails through SecureEmail.
+											encrypted emails through PrivaMail.
 										</p>
 
 										<div className="space-y-4">
@@ -12320,7 +12320,7 @@ function Settings({
 									}`}
 								>
 									Connect your existing email accounts to send and receive
-									encrypted emails through SecureEmail.
+									encrypted emails through PrivaMail.
 								</p>
 
 								<div className="mt-6 space-y-4">
